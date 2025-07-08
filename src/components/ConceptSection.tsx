@@ -71,37 +71,97 @@ export default function ConceptSection() {
 
           <div className="relative">
             <div className="bg-gradient-to-br from-green-50 to-yellow-50 rounded-2xl p-8 shadow-lg">
-              <div className="space-y-6">
-                {/* Solar panel representation */}
-                <div className="flex justify-center">
-                  <div className="relative">
-                    <div className="w-48 h-32 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg shadow-lg transform -rotate-12 opacity-80"></div>
-                    <div className="absolute top-2 left-2 w-48 h-32 bg-gradient-to-br from-blue-800 to-blue-600 rounded-lg shadow-lg transform rotate-12"></div>
-                    <div className="absolute top-4 left-4 w-48 h-32 bg-gradient-to-br from-blue-700 to-blue-500 rounded-lg shadow-lg"></div>
+              <div className="space-y-8">
+                {/* Central diagram */}
+                <div className="relative flex justify-center">
+                  <div className="w-64 h-64 relative">
+                    {/* Central circle */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-br from-green-500 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white font-bold text-sm">AGRO</span>
+                      <span className="text-white font-bold text-sm">VOLT</span>
+                    </div>
+                    
+                    {/* Surrounding concepts */}
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
+                      <div className="bg-yellow-100 rounded-full p-4 shadow-md">
+                        <Zap className="w-6 h-6 text-yellow-600" />
+                      </div>
+                      <div className="text-center mt-2">
+                        <span className="text-sm font-semibold text-gray-700">Energía</span>
+                      </div>
+                    </div>
+                    
+                    <div className="absolute top-1/4 right-0 transform translate-x-2">
+                      <div className="bg-blue-100 rounded-full p-4 shadow-md">
+                        <Shield className="w-6 h-6 text-blue-600" />
+                      </div>
+                      <div className="text-center mt-2">
+                        <span className="text-sm font-semibold text-gray-700">Protección</span>
+                      </div>
+                    </div>
+                    
+                    <div className="absolute bottom-1/4 right-0 transform translate-x-2">
+                      <div className="bg-cyan-100 rounded-full p-4 shadow-md">
+                        <Droplets className="w-6 h-6 text-cyan-600" />
+                      </div>
+                      <div className="text-center mt-2">
+                        <span className="text-sm font-semibold text-gray-700">Ahorro</span>
+                      </div>
+                    </div>
+                    
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2">
+                      <div className="bg-green-100 rounded-full p-4 shadow-md">
+                        <Sprout className="w-6 h-6 text-green-600" />
+                      </div>
+                      <div className="text-center mt-2">
+                        <span className="text-sm font-semibold text-gray-700">Producción</span>
+                      </div>
+                    </div>
+                    
+                    <div className="absolute bottom-1/4 left-0 transform -translate-x-2">
+                      <div className="bg-emerald-100 rounded-full p-4 shadow-md">
+                        <Tractor className="w-6 h-6 text-emerald-600" />
+                      </div>
+                      <div className="text-center mt-2">
+                        <span className="text-sm font-semibold text-gray-700">Agricultura</span>
+                      </div>
+                    </div>
+                    
+                    <div className="absolute top-1/4 left-0 transform -translate-x-2">
+                      <div className="bg-orange-100 rounded-full p-4 shadow-md">
+                        <Sun className="w-6 h-6 text-orange-600" />
+                      </div>
+                      <div className="text-center mt-2">
+                        <span className="text-sm font-semibold text-gray-700">Solar</span>
+                      </div>
+                    </div>
+                    
+                    {/* Connecting lines */}
+                    <div className="absolute inset-0">
+                      <svg className="w-full h-full" viewBox="0 0 256 256">
+                        <defs>
+                          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
+                            <stop offset="100%" stopColor="#eab308" stopOpacity="0.3" />
+                          </linearGradient>
+                        </defs>
+                        {/* Lines connecting center to each concept */}
+                        <line x1="128" y1="128" x2="128" y2="40" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="128" y1="128" x2="200" y2="80" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="128" y1="128" x2="200" y2="176" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="128" y1="128" x2="128" y2="216" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="128" y1="128" x2="56" y2="176" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="128" y1="128" x2="56" y2="80" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-
-                {/* Arrows showing sun protection */}
-                <div className="flex justify-around items-center">
-                  <div className="text-center">
-                    <Sun className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
-                    <div className="text-sm text-gray-600">Mañana</div>
-                  </div>
-                  <div className="text-center">
-                    <Shield className="w-8 h-8 text-green-500 mx-auto mb-2" />
-                    <div className="text-sm text-gray-600">Protección</div>
-                  </div>
-                  <div className="text-center">
-                    <Sun className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
-                    <div className="text-sm text-gray-600">Tarde</div>
-                  </div>
-                </div>
-
-                {/* Crops representation */}
-                <div className="flex justify-center space-x-2">
-                  {[...Array(6)].map((_, i) => (
-                    <Sprout key={i} className="w-6 h-6 text-green-500" />
-                  ))}
+                
+                {/* Bottom text */}
+                <div className="text-center">
+                  <p className="text-sm text-gray-600 font-medium">
+                    Simbiosis perfecta entre tecnología solar y agricultura sostenible
+                  </p>
                 </div>
               </div>
             </div>

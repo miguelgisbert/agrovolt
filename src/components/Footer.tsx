@@ -1,4 +1,4 @@
-import { Sun, Sprout, Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Sun, Sprout, Mail, Linkedin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -21,14 +21,6 @@ export default function Footer() {
               Revolucionando la agricultura con energía solar. Protegemos tus cultivos mientras 
               generas energía limpia para un futuro sostenible.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Services */}
@@ -46,28 +38,55 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Empresa</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Sobre Nosotros</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Nuestro Equipo</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Casos de Éxito</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              <li>
+                <span className="hover:text-white transition-colors cursor-pointer relative group">
+                  Sobre Nosotros
+                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    En construcción
+                  </span>
+                </span>
+              </li>
+              <li>
+                <span className="hover:text-white transition-colors cursor-pointer relative group">
+                  Casos de Éxito
+                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    En construcción
+                  </span>
+                </span>
+              </li>
+              <li>
+                <span className="hover:text-white transition-colors cursor-pointer relative group">
+                  Blog
+                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    En construcción
+                  </span>
+                </span>
+              </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contacto</h4>
-            <div className="space-y-3 text-gray-400">
-              <div className="flex items-center gap-2">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-gray-400">
                 <Mail className="w-4 h-4" />
                 <span>info@agrovolt.com</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>+34 900 123 456</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>Madrid, España</span>
+              
+              <div className="flex space-x-4">
+                <span className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group">
+                  <Linkedin className="w-5 h-5" />
+                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    En construcción
+                  </span>
+                </span>
+                <span className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group">
+                  <Instagram className="w-5 h-5" />
+                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    En construcción
+                  </span>
+                </span>
               </div>
             </div>
           </div>
