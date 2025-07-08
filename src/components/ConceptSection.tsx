@@ -92,8 +92,8 @@ export default function ConceptSection() {
                       </div>
                     </div>
                     
-                    {/* Protección - Top Right (72° from top) */}
-                    <div className="absolute top-16 right-8 flex flex-col items-center">
+                    {/* Protección - Top Right */}
+                    <div className="absolute top-12 right-12 flex flex-col items-center">
                       <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Shield className="w-6 h-6 text-blue-600" />
                       </div>
@@ -102,8 +102,8 @@ export default function ConceptSection() {
                       </div>
                     </div>
                     
-                    {/* Ahorro - Bottom Right (144° from top) */}
-                    <div className="absolute bottom-20 right-4 flex flex-col items-center">
+                    {/* Reducción de costes - Bottom Right */}
+                    <div className="absolute bottom-16 right-16 flex flex-col items-center">
                       <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
                         <div className="flex items-center gap-0.5">
                           <Droplets className="w-4 h-4 text-cyan-600" />
@@ -118,8 +118,8 @@ export default function ConceptSection() {
                       </div>
                     </div>
                     
-                    {/* Independencia - Bottom Left (216° from top) */}
-                    <div className="absolute bottom-20 left-4 flex flex-col items-center">
+                    {/* Independencia - Bottom Left */}
+                    <div className="absolute bottom-16 left-16 flex flex-col items-center">
                       <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative overflow-visible">
                         <div className="relative">
                           <Fuel className="w-6 h-6 text-red-600" />
@@ -133,8 +133,8 @@ export default function ConceptSection() {
                       </div>
                     </div>
                     
-                    {/* Producción - Top Left (288° from top) */}
-                    <div className="absolute top-16 left-8 flex flex-col items-center">
+                    {/* Producción - Top Left */}
+                    <div className="absolute top-12 left-12 flex flex-col items-center">
                       <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Sprout className="w-6 h-6 text-green-600" />
                       </div>
