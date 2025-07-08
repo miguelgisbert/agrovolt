@@ -83,7 +83,7 @@ export default function ConceptSection() {
                     
                     {/* Surrounding concepts */}
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
-                      <div className="bg-yellow-100 rounded-full p-4 shadow-md">
+                      <div className="bg-yellow-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Zap className="w-6 h-6 text-yellow-600" />
                       </div>
                       <div className="text-center mt-2">
@@ -92,7 +92,7 @@ export default function ConceptSection() {
                     </div>
                     
                     <div className="absolute top-1/4 right-0 transform translate-x-2">
-                      <div className="bg-blue-100 rounded-full p-4 shadow-md">
+                      <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Shield className="w-6 h-6 text-blue-600" />
                       </div>
                       <div className="text-center mt-2">
@@ -101,7 +101,7 @@ export default function ConceptSection() {
                     </div>
                     
                     <div className="absolute bottom-1/4 right-0 transform translate-x-2">
-                      <div className="bg-cyan-100 rounded-full p-4 shadow-md">
+                      <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Droplets className="w-6 h-6 text-cyan-600" />
                       </div>
                       <div className="text-center mt-2">
@@ -110,29 +110,11 @@ export default function ConceptSection() {
                     </div>
                     
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2">
-                      <div className="bg-green-100 rounded-full p-4 shadow-md">
+                      <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Sprout className="w-6 h-6 text-green-600" />
                       </div>
                       <div className="text-center mt-2">
                         <span className="text-sm font-semibold text-gray-700">Producción</span>
-                      </div>
-                    </div>
-                    
-                    <div className="absolute bottom-1/4 left-0 transform -translate-x-2">
-                      <div className="bg-emerald-100 rounded-full p-4 shadow-md">
-                        <Tractor className="w-6 h-6 text-emerald-600" />
-                      </div>
-                      <div className="text-center mt-2">
-                        <span className="text-sm font-semibold text-gray-700">Agricultura</span>
-                      </div>
-                    </div>
-                    
-                    <div className="absolute top-1/4 left-0 transform -translate-x-2">
-                      <div className="bg-orange-100 rounded-full p-4 shadow-md">
-                        <Sun className="w-6 h-6 text-orange-600" />
-                      </div>
-                      <div className="text-center mt-2">
-                        <span className="text-sm font-semibold text-gray-700">Solar</span>
                       </div>
                     </div>
                     
@@ -150,8 +132,6 @@ export default function ConceptSection() {
                         <line x1="128" y1="128" x2="200" y2="80" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
                         <line x1="128" y1="128" x2="200" y2="176" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
                         <line x1="128" y1="128" x2="128" y2="216" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="128" y1="128" x2="56" y2="176" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="128" y1="128" x2="56" y2="80" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
                       </svg>
                     </div>
                   </div>
