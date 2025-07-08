@@ -87,7 +87,7 @@ export default function ConceptSection() {
                       <div className="bg-yellow-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Zap className="w-6 h-6 text-yellow-600" />
                       </div>
-                      <div className="text-center mt-2 w-12">
+                      <div className="text-center mt-2">
                         <span className="text-sm font-semibold text-gray-700">Energía</span>
                       </div>
                     </div>
@@ -97,7 +97,7 @@ export default function ConceptSection() {
                       <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Shield className="w-6 h-6 text-blue-600" />
                       </div>
-                      <div className="text-center mt-2 w-12">
+                      <div className="text-center mt-2">
                         <span className="text-sm font-semibold text-gray-700">Protección</span>
                       </div>
                     </div>
@@ -110,7 +110,7 @@ export default function ConceptSection() {
                           <Plug className="w-4 h-4 text-cyan-600" />
                         </div>
                       </div>
-                      <div className="text-center mt-2 w-12">
+                      <div className="text-center mt-2">
                         <span className="text-sm font-semibold text-gray-700">Ahorro</span>
                       </div>
                     </div>
@@ -121,11 +121,11 @@ export default function ConceptSection() {
                         <div className="relative">
                           <Fuel className="w-6 h-6 text-red-600" />
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-10 h-1 bg-red-600 rotate-45"></div>
+                            <div className="w-12 h-0.5 bg-red-600 rotate-45"></div>
                           </div>
                         </div>
                       </div>
-                      <div className="text-center mt-2 w-12">
+                      <div className="text-center mt-2">
                         <span className="text-sm font-semibold text-gray-700">Independencia</span>
                       </div>
                     </div>
@@ -135,7 +135,7 @@ export default function ConceptSection() {
                       <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Sprout className="w-6 h-6 text-green-600" />
                       </div>
-                      <div className="text-center mt-2 w-12">
+                      <div className="text-center mt-2">
                         <span className="text-sm font-semibold text-gray-700">Producción</span>
                       </div>
                     </div>
