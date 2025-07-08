@@ -1,4 +1,4 @@
-import { Shield, Droplets, Zap, Tractor, Sun, Sprout } from 'lucide-react';
+import { Shield, Droplets, Zap, Tractor, Sun, Sprout, Plug, Fuel } from 'lucide-react';
 
 export default function ConceptSection() {
   return (
@@ -74,15 +74,16 @@ export default function ConceptSection() {
               <div className="space-y-8">
                 {/* Central diagram */}
                 <div className="relative flex justify-center">
-                  <div className="w-64 h-64 relative">
+                  <div className="w-80 h-80 relative">
                     {/* Central circle */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-br from-green-500 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
-                      <span className="text-white font-bold text-sm">AGRO</span>
-                      <span className="text-white font-bold text-sm">VOLT</span>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-green-500 to-yellow-500 rounded-full flex flex-col items-center justify-center shadow-lg">
+                      <span className="text-white font-bold text-xs">AGRO</span>
+                      <span className="text-white font-bold text-xs">VOLT</span>
                     </div>
                     
                     {/* Surrounding concepts */}
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
+                    {/* Energía - Top */}
+                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-yellow-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Zap className="w-6 h-6 text-yellow-600" />
                       </div>
@@ -91,7 +92,8 @@ export default function ConceptSection() {
                       </div>
                     </div>
                     
-                    <div className="absolute top-1/4 right-0 transform translate-x-2">
+                    {/* Protección - Top Right */}
+                    <div className="absolute top-12 right-4 transform translate-x-2">
                       <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Shield className="w-6 h-6 text-blue-600" />
                       </div>
@@ -100,16 +102,36 @@ export default function ConceptSection() {
                       </div>
                     </div>
                     
-                    <div className="absolute bottom-1/4 right-0 transform translate-x-2">
-                      <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
-                        <Droplets className="w-6 h-6 text-cyan-600" />
+                    {/* Ahorro - Right */}
+                    <div className="absolute top-1/2 right-4 transform -translate-y-1/2 translate-x-2">
+                      <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
+                        <div className="flex items-center gap-0.5">
+                          <Droplets className="w-4 h-4 text-cyan-600" />
+                          <Plug className="w-4 h-4 text-cyan-600" />
+                        </div>
                       </div>
                       <div className="text-center mt-2">
                         <span className="text-sm font-semibold text-gray-700">Ahorro</span>
                       </div>
                     </div>
                     
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2">
+                    {/* Independencia - Bottom Right */}
+                    <div className="absolute bottom-12 right-4 transform translate-x-2">
+                      <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
+                        <div className="relative">
+                          <Fuel className="w-6 h-6 text-red-600" />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-8 h-0.5 bg-red-600 rotate-45"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-center mt-2">
+                        <span className="text-sm font-semibold text-gray-700">Independencia</span>
+                      </div>
+                    </div>
+                    
+                    {/* Producción - Bottom */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Sprout className="w-6 h-6 text-green-600" />
                       </div>
@@ -118,9 +140,19 @@ export default function ConceptSection() {
                       </div>
                     </div>
                     
+                    {/* Diseño - Bottom Left */}
+                    <div className="absolute bottom-12 left-4 transform -translate-x-2">
+                      <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
+                        <Tractor className="w-6 h-6 text-purple-600" />
+                      </div>
+                      <div className="text-center mt-2">
+                        <span className="text-sm font-semibold text-gray-700">Diseño</span>
+                      </div>
+                    </div>
+                    
                     {/* Connecting lines */}
                     <div className="absolute inset-0">
-                      <svg className="w-full h-full" viewBox="0 0 256 256">
+                      <svg className="w-full h-full" viewBox="0 0 320 320">
                         <defs>
                           <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
@@ -128,10 +160,12 @@ export default function ConceptSection() {
                           </linearGradient>
                         </defs>
                         {/* Lines connecting center to each concept */}
-                        <line x1="128" y1="128" x2="128" y2="40" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="128" y1="128" x2="200" y2="80" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="128" y1="128" x2="200" y2="176" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="128" y1="128" x2="128" y2="216" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="160" y1="160" x2="160" y2="52" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="160" y1="160" x2="244" y2="100" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="160" y1="160" x2="268" y2="160" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="160" y1="160" x2="244" y2="220" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="160" y1="160" x2="160" y2="268" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
+                        <line x1="160" y1="160" x2="76" y2="220" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
                       </svg>
                     </div>
                   </div>
