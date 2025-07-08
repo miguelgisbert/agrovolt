@@ -103,7 +103,7 @@ export default function ConceptSection() {
                     </div>
                     
                     {/* Ahorro - Bottom Right (144° from top) */}
-                    <div className="absolute bottom-12 right-20 flex flex-col items-center">
+                    <div className="absolute bottom-20 right-4 flex flex-col items-center">
                       <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
                         <div className="flex items-center gap-0.5">
                           <Droplets className="w-4 h-4 text-cyan-600" />
@@ -119,12 +119,12 @@ export default function ConceptSection() {
                     </div>
                     
                     {/* Independencia - Bottom Left (216° from top) */}
-                    <div className="absolute bottom-12 left-20 flex flex-col items-center">
+                    <div className="absolute bottom-20 left-4 flex flex-col items-center">
                       <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative overflow-visible">
                         <div className="relative">
                           <Fuel className="w-6 h-6 text-red-600" />
                           <div className="absolute -inset-2 flex items-center justify-center overflow-visible">
-                            <div className="w-20 h-0.5 bg-red-700 rotate-45 shadow-sm"></div>
+                            <div className="w-16 h-px bg-red-700 rotate-45 shadow-sm"></div>
                           </div>
                         </div>
                       </div>
