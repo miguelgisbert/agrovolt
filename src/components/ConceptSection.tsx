@@ -103,7 +103,7 @@ export default function ConceptSection() {
                     </div>
                     
                     {/* Ahorro - Bottom Right (144° from top) */}
-                    <div className="absolute bottom-16 right-8 flex flex-col items-center">
+                    <div className="absolute bottom-16 right-16 flex flex-col items-center">
                       <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
                         <div className="flex items-center gap-0.5">
                           <Droplets className="w-4 h-4 text-cyan-600" />
@@ -111,17 +111,17 @@ export default function ConceptSection() {
                         </div>
                       </div>
                       <div className="mt-2">
-                        <span className="text-sm font-semibold text-gray-700">Ahorro</span>
+                        <span className="text-sm font-semibold text-gray-700">Reducción de costes</span>
                       </div>
                     </div>
                     
                     {/* Independencia - Bottom Left (216° from top) */}
-                    <div className="absolute bottom-16 left-8 flex flex-col items-center">
+                    <div className="absolute bottom-16 left-16 flex flex-col items-center">
                       <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative overflow-visible">
                         <div className="relative">
                           <Fuel className="w-6 h-6 text-red-600" />
-                          <div className="absolute inset-0 flex items-center justify-center overflow-visible">
-                            <div className="w-16 h-0.5 bg-red-600 rotate-45"></div>
+                          <div className="absolute -inset-2 flex items-center justify-center overflow-visible">
+                            <div className="w-20 h-1 bg-red-700 rotate-45 shadow-sm"></div>
                           </div>
                         </div>
                       </div>
