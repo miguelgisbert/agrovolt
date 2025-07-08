@@ -69,52 +69,82 @@ export default function TechnologySection() {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 shadow-lg">
-              <div className="space-y-6">
-                {/* App mockup */}
-                <div className="bg-white rounded-xl p-4 shadow-lg">
-                  <div className="flex items-center gap-2 mb-4">
-                    <Smartphone className="w-5 h-5 text-blue-600" />
-                    <span className="font-semibold text-gray-900">AgroVolt Control</span>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Producción Energética</span>
-                      <span className="text-sm font-semibold text-green-600">847 kWh</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full w-3/4"></div>
-                    </div>
-                    
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Humedad del Suelo</span>
-                      <span className="text-sm font-semibold text-blue-600">68%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full w-2/3"></div>
-                    </div>
-                    
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Estado de Protección</span>
-                      <span className="text-sm font-semibold text-yellow-600">Activo</span>
-                    </div>
-                  </div>
-                </div>
+            {/* Mobile phone mockup */}
+            <div className="flex justify-center">
+              <div className="relative">
+                {/* Phone frame */}
+                <div className="w-72 h-[600px] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                  <div className="w-full h-full bg-black rounded-[2.5rem] p-1">
+                    <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
+                      {/* Status bar */}
+                      <div className="bg-gray-50 px-6 py-3 flex justify-between items-center">
+                        <span className="text-sm font-semibold">9:41</span>
+                        <div className="flex items-center gap-1">
+                          <div className="w-4 h-2 bg-green-500 rounded-sm"></div>
+                          <div className="w-6 h-3 border border-gray-400 rounded-sm">
+                            <div className="w-4 h-full bg-green-500 rounded-sm"></div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* App content */}
+                      <div className="p-4 h-full bg-gradient-to-br from-blue-50 to-purple-50">
+                        {/* Header */}
+                        <div className="flex items-center gap-2 mb-6">
+                          <Smartphone className="w-6 h-6 text-blue-600" />
+                          <span className="text-lg font-bold text-gray-900">AgroVolt Control</span>
+                        </div>
+                        
+                        {/* Main metrics */}
+                        <div className="space-y-4 mb-6">
+                          <div className="bg-white rounded-xl p-4 shadow-sm">
+                            <div className="flex justify-between items-center mb-2">
+                              <span className="text-sm text-gray-600">Producción Energética</span>
+                              <span className="text-lg font-bold text-green-600">847 kWh</span>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-2">
+                              <div className="bg-green-600 h-2 rounded-full w-3/4"></div>
+                            </div>
+                          </div>
+                          
+                          <div className="bg-white rounded-xl p-4 shadow-sm">
+                            <div className="flex justify-between items-center mb-2">
+                              <span className="text-sm text-gray-600">Humedad del Suelo</span>
+                              <span className="text-lg font-bold text-blue-600">68%</span>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-2">
+                              <div className="bg-blue-600 h-2 rounded-full w-2/3"></div>
+                            </div>
+                          </div>
+                          
+                          <div className="bg-white rounded-xl p-4 shadow-sm">
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-gray-600">Estado de Protección</span>
+                              <span className="text-sm font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">Activo</span>
+                            </div>
+                          </div>
+                        </div>
 
-                {/* Status indicators */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white rounded-lg p-4 text-center">
-                    <Zap className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
-                    <div className="text-sm font-semibold text-gray-900">Generando</div>
-                    <div className="text-xs text-gray-600">2.4 kW</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 text-center">
-                    <Cloud className="w-8 h-8 text-blue-500 mx-auto mb-2" />
-                    <div className="text-sm font-semibold text-gray-900">Clima</div>
-                    <div className="text-xs text-gray-600">Soleado</div>
+                        {/* Status indicators */}
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+                            <Zap className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
+                            <div className="text-sm font-semibold text-gray-900">Generando</div>
+                            <div className="text-xs text-gray-600">2.4 kW</div>
+                          </div>
+                          <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+                            <Cloud className="w-8 h-8 text-blue-500 mx-auto mb-2" />
+                            <div className="text-sm font-semibold text-gray-900">Clima</div>
+                            <div className="text-xs text-gray-600">Soleado</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                
+                {/* Home indicator */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gray-600 rounded-full"></div>
               </div>
             </div>
           </div>
