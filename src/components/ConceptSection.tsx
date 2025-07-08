@@ -83,59 +83,59 @@ export default function ConceptSection() {
                     
                     {/* Surrounding concepts */}
                     {/* Energía - Top */}
-                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
                       <div className="bg-yellow-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Zap className="w-6 h-6 text-yellow-600" />
                       </div>
-                      <div className="text-center mt-2">
+                      <div className="mt-2">
                         <span className="text-sm font-semibold text-gray-700">Energía</span>
                       </div>
                     </div>
                     
                     {/* Protección - Top Right (72° from top) */}
-                    <div className="absolute top-16 right-8">
+                    <div className="absolute top-16 right-8 flex flex-col items-center">
                       <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Shield className="w-6 h-6 text-blue-600" />
                       </div>
-                      <div className="text-center mt-2">
+                      <div className="mt-2">
                         <span className="text-sm font-semibold text-gray-700">Protección</span>
                       </div>
                     </div>
                     
                     {/* Ahorro - Bottom Right (144° from top) */}
-                    <div className="absolute bottom-16 right-8">
+                    <div className="absolute bottom-16 right-8 flex flex-col items-center">
                       <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
                         <div className="flex items-center gap-0.5">
                           <Droplets className="w-4 h-4 text-cyan-600" />
                           <Plug className="w-4 h-4 text-cyan-600" />
                         </div>
                       </div>
-                      <div className="text-center mt-2">
+                      <div className="mt-2">
                         <span className="text-sm font-semibold text-gray-700">Ahorro</span>
                       </div>
                     </div>
                     
                     {/* Independencia - Bottom Left (216° from top) */}
-                    <div className="absolute bottom-16 left-8">
-                      <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
+                    <div className="absolute bottom-16 left-8 flex flex-col items-center">
+                      <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative overflow-visible">
                         <div className="relative">
                           <Fuel className="w-6 h-6 text-red-600" />
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-12 h-0.5 bg-red-600 rotate-45"></div>
+                          <div className="absolute inset-0 flex items-center justify-center overflow-visible">
+                            <div className="w-16 h-0.5 bg-red-600 rotate-45"></div>
                           </div>
                         </div>
                       </div>
-                      <div className="text-center mt-2">
+                      <div className="mt-2">
                         <span className="text-sm font-semibold text-gray-700">Independencia</span>
                       </div>
                     </div>
                     
                     {/* Producción - Top Left (288° from top) */}
-                    <div className="absolute top-16 left-8">
+                    <div className="absolute top-16 left-8 flex flex-col items-center">
                       <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Sprout className="w-6 h-6 text-green-600" />
                       </div>
-                      <div className="text-center mt-2">
+                      <div className="mt-2">
                         <span className="text-sm font-semibold text-gray-700">Producción</span>
                       </div>
                     </div>
