@@ -37,7 +37,7 @@ export default function ConceptSection() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Gestión del Agua</h3>
                 <p className="text-gray-600">
                   Reduce el consumo de agua de riego hasta un 40% gracias a la sombra parcial, 
-                  mientras recolectas agua de lluvia para uso agrícola.
+                  mientras recolectas agua de lluvia y del rocío.
                 </p>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function ConceptSection() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Energía para tu Granja</h3>
                 <p className="text-gray-600">
                   Genera energía limpia para bombas de riego, maquinaria y preparate para el futuro 
-                  de tractores eléctricos, independizándote de las fluctuaciones del gasóleo.
+                  de tractores eléctricos, independizándote de las fluctuaciones del precio del gasóleo.
                 </p>
               </div>
             </div>
