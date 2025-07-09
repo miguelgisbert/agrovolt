@@ -1,4 +1,13 @@
-import { Shield, Droplets, Zap, Tractor, Sun, Sprout, Plug, Fuel } from 'lucide-react';
+import {
+  Shield,
+  Droplets,
+  Zap,
+  Tractor,
+  Sun,
+  Sprout,
+  Plug,
+  Fuel,
+} from "lucide-react";
 
 export default function ConceptSection() {
   return (
@@ -9,8 +18,9 @@ export default function ConceptSection() {
             ¿Qué es la <span className="text-green-600">Agrovoltaica</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Un sistema innovador que combina la producción de energía solar con la agricultura, 
-            creando una simbiosis perfecta que beneficia tanto a tus cultivos como a tu economía.
+            Un sistema innovador que combina la producción de energía solar con
+            la agricultura, creando una simbiosis perfecta que beneficia tanto a
+            tus cultivos como a tu economía.
           </p>
         </div>
 
@@ -21,10 +31,13 @@ export default function ConceptSection() {
                 <Shield className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Protección Inteligente</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Protección Inteligente
+                </h3>
                 <p className="text-gray-600">
-                  Las placas solares protegen tus cultivos del granizo, lluvia intensa y exceso de radiación a medio día, 
-                  mientras permiten el paso de luz solar beneficiosa en las horas óptimas.
+                  Las placas solares protegen tus cultivos del granizo, lluvia
+                  intensa y exceso de radiación a medio día, mientras permiten
+                  el paso de luz solar beneficiosa en las horas óptimas.
                 </p>
               </div>
             </div>
@@ -34,10 +47,13 @@ export default function ConceptSection() {
                 <Droplets className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Gestión del Agua</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Gestión del Agua
+                </h3>
                 <p className="text-gray-600">
-                  Reduce el consumo de agua de riego hasta un 40% gracias a la sombra parcial, 
-                  mientras recolectas agua de lluvia y del rocío.
+                  Reduce el consumo de agua de riego hasta un 40% gracias a la
+                  sombra parcial, mientras recolectas agua de lluvia y del
+                  rocío.
                 </p>
               </div>
             </div>
@@ -47,10 +63,13 @@ export default function ConceptSection() {
                 <Zap className="w-6 h-6 text-yellow-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Energía para tu Granja</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Energía para tu Granja
+                </h3>
                 <p className="text-gray-600">
-                  Genera energía limpia para bombas de riego, maquinaria y preparate para el futuro 
-                  de tractores eléctricos, independizándote de las fluctuaciones del precio del gasóleo.
+                  Genera energía limpia para bombas de riego, maquinaria y
+                  preparate para el futuro de tractores eléctricos,
+                  independizándote de las fluctuaciones del precio del gasóleo.
                 </p>
               </div>
             </div>
@@ -60,11 +79,15 @@ export default function ConceptSection() {
                 <Tractor className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Diseño Inteligente</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Diseño Inteligente
+                </h3>
                 <p className="text-gray-600">
-                  Estructura con poste central que permite el paso libre de tractores y maquinaria entre cultivos, 
-                  optimizando el espacio y permitiendo a los cabezales o aperos de cosechadoras o otras máquinas acceder
-                  a la superficie cultivada sin interferir con la estructura solar.
+                  Estructura con poste central que permite el paso libre de
+                  tractores y maquinaria entre cultivos, optimizando el espacio
+                  y permitiendo a los cabezales o aperos de cosechadoras o otras
+                  máquinas acceder a la superficie cultivada sin interferir con
+                  la estructura solar.
                 </p>
               </div>
             </div>
@@ -81,7 +104,7 @@ export default function ConceptSection() {
                       <span className="text-white font-bold text-xs">AGRO</span>
                       <span className="text-white font-bold text-xs">VOLT</span>
                     </div>
-                    
+
                     {/* Surrounding concepts */}
                     {/* Energía - Top */}
                     <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
@@ -89,20 +112,24 @@ export default function ConceptSection() {
                         <Zap className="w-6 h-6 text-yellow-600" />
                       </div>
                       <div className="mt-2">
-                        <span className="text-sm font-semibold text-gray-700">Energía</span>
+                        <span className="text-sm font-semibold text-gray-700">
+                          Energía
+                        </span>
                       </div>
                     </div>
-                    
+
                     {/* Protección - Top Right */}
                     <div className="absolute top-16 right-8 flex flex-col items-center">
                       <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Shield className="w-6 h-6 text-blue-600" />
                       </div>
                       <div className="mt-2">
-                        <span className="text-sm font-semibold text-gray-700">Protección</span>
+                        <span className="text-sm font-semibold text-gray-700">
+                          Protección
+                        </span>
                       </div>
                     </div>
-                    
+
                     {/* Reducción de costes - Bottom Right */}
                     <div className="absolute bottom-14 right-10 flex flex-col items-center">
                       <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
@@ -113,12 +140,16 @@ export default function ConceptSection() {
                       </div>
                       <div className="mt-2">
                         <div className="text-center">
-                          <div className="text-sm font-semibold text-gray-700">Reducción</div>
-                          <div className="text-sm font-semibold text-gray-700">de costes</div>
+                          <div className="text-sm font-semibold text-gray-700">
+                            Reducción
+                          </div>
+                          <div className="text-sm font-semibold text-gray-700">
+                            de costes
+                          </div>
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Independencia - Bottom Left */}
                     <div className="absolute bottom-16 left-7 flex flex-col items-center">
                       <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative overflow-visible">
@@ -130,17 +161,21 @@ export default function ConceptSection() {
                         </div>
                       </div>
                       <div className="mt-2">
-                        <span className="text-sm font-semibold text-gray-700">Independencia</span>
+                        <span className="text-sm font-semibold text-gray-700">
+                          Independencia
+                        </span>
                       </div>
                     </div>
-                    
+
                     {/* Producción - Top Left */}
                     <div className="absolute top-16 left-8 flex flex-col items-center">
                       <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Sprout className="w-6 h-6 text-green-600" />
                       </div>
                       <div className="mt-2">
-                        <span className="text-sm font-semibold text-gray-700">Producción</span>
+                        <span className="text-sm font-semibold text-gray-700">
+                          Producción
+                        </span>
                       </div>
                     </div>
                   </div>
