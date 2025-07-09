@@ -1,4 +1,4 @@
-import { Sun, Sprout, Mail, Linkedin, Instagram } from 'lucide-react';
+import { Sun, Sprout, Mail, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -18,8 +18,9 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-400 mb-4">
-              Revolucionando la agricultura con energía solar. Protegemos tus cultivos mientras 
-              generas energía limpia para un futuro sostenible.
+              Revolucionando la agricultura con energía solar. Protegemos tus
+              cultivos mientras generas energía limpia para un futuro
+              sostenible.
             </p>
           </div>
 
@@ -27,10 +28,26 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Servicios</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Instalación Agrovoltaica</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Consultoría Técnica</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Mantenimiento</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Monitoreo Remoto</a></li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Instalación Agrovoltaica
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Consultoría Técnica
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Mantenimiento
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Monitoreo Remoto
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -71,19 +88,24 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-gray-400">
                 <Mail className="w-4 h-4" />
-                <span>info@agrovolt.com</span>
+                <a
+                  href="mailto:info@agrovolt.es"
+                  className="hover:text-white transition-colors"
+                >
+                  info@agrovolt.es
+                </a>
               </div>
-              
+
               <div className="flex space-x-4">
                 <span className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group">
                   <Linkedin className="w-5 h-5" />
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                     En construcción
                   </span>
                 </span>
                 <span className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group">
                   <Instagram className="w-5 h-5" />
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                     En construcción
                   </span>
                 </span>
