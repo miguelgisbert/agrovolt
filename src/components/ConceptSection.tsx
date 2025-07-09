@@ -119,7 +119,7 @@ export default function ConceptSection() {
                     </div>
                     
                     {/* Independencia - Bottom Left */}
-                    <div className="absolute bottom-16 left-16 flex flex-col items-center">
+                    <div className="absolute bottom-16 left-10 flex flex-col items-center">
                       <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative overflow-visible">
                         <div className="relative">
                           <Fuel className="w-6 h-6 text-red-600" />
