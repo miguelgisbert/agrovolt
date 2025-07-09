@@ -23,7 +23,7 @@ export default function ConceptSection() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Protección Inteligente</h3>
                 <p className="text-gray-600">
-                  Las placas solares protegen tus cultivos del granizo, lluvia intensa y exceso de radiación, 
+                  Las placas solares protegen tus cultivos del granizo, lluvia intensa y exceso de radiación a medio día, 
                   mientras permiten el paso de luz solar beneficiosa en las horas óptimas.
                 </p>
               </div>
@@ -37,7 +37,7 @@ export default function ConceptSection() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Gestión del Agua</h3>
                 <p className="text-gray-600">
                   Reduce el consumo de agua de riego hasta un 40% gracias a la sombra parcial, 
-                  mientras recolectas agua de lluvia para uso agrícola.
+                  mientras recolectas agua de lluvia y del rocío.
                 </p>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function ConceptSection() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Energía para tu Granja</h3>
                 <p className="text-gray-600">
                   Genera energía limpia para bombas de riego, maquinaria y preparate para el futuro 
-                  de tractores eléctricos, independizándote de las fluctuaciones del gasóleo.
+                  de tractores eléctricos, independizándote de las fluctuaciones del precio del gasóleo.
                 </p>
               </div>
             </div>
@@ -62,8 +62,9 @@ export default function ConceptSection() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Diseño Inteligente</h3>
                 <p className="text-gray-600">
-                  Estructura con poste central que permite el paso libre de tractores y maquinaria, 
-                  optimizando el espacio sin interferir con las operaciones agrícolas.
+                  Estructura con poste central que permite el paso libre de tractores y maquinaria entre cultivos, 
+                  optimizando el espacio y permitiendo a los cabezales o aperos de cosechadoras o otras máquinas acceder
+                  a la superficie cultivada sin interferir con la estructura solar.
                 </p>
               </div>
             </div>
@@ -83,99 +84,66 @@ export default function ConceptSection() {
                     
                     {/* Surrounding concepts */}
                     {/* Energía - Top */}
-                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
                       <div className="bg-yellow-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Zap className="w-6 h-6 text-yellow-600" />
                       </div>
-                      <div className="text-center mt-2">
+                      <div className="mt-2">
                         <span className="text-sm font-semibold text-gray-700">Energía</span>
                       </div>
                     </div>
                     
                     {/* Protección - Top Right */}
-                    <div className="absolute top-12 right-4 transform translate-x-2">
+                    <div className="absolute top-16 right-8 flex flex-col items-center">
                       <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Shield className="w-6 h-6 text-blue-600" />
                       </div>
-                      <div className="text-center mt-2">
+                      <div className="mt-2">
                         <span className="text-sm font-semibold text-gray-700">Protección</span>
                       </div>
                     </div>
                     
-                    {/* Ahorro - Right */}
-                    <div className="absolute top-1/2 right-4 transform -translate-y-1/2 translate-x-2">
+                    {/* Reducción de costes - Bottom Right */}
+                    <div className="absolute bottom-14 right-10 flex flex-col items-center">
                       <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
                         <div className="flex items-center gap-0.5">
                           <Droplets className="w-4 h-4 text-cyan-600" />
                           <Plug className="w-4 h-4 text-cyan-600" />
                         </div>
                       </div>
-                      <div className="text-center mt-2">
-                        <span className="text-sm font-semibold text-gray-700">Ahorro</span>
+                      <div className="mt-2">
+                        <div className="text-center">
+                          <div className="text-sm font-semibold text-gray-700">Reducción</div>
+                          <div className="text-sm font-semibold text-gray-700">de costes</div>
+                        </div>
                       </div>
                     </div>
                     
-                    {/* Independencia - Bottom Right */}
-                    <div className="absolute bottom-12 right-4 transform translate-x-2">
-                      <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
+                    {/* Independencia - Bottom Left */}
+                    <div className="absolute bottom-16 left-7 flex flex-col items-center">
+                      <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative overflow-visible">
                         <div className="relative">
                           <Fuel className="w-6 h-6 text-red-600" />
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-8 h-0.5 bg-red-600 rotate-45"></div>
+                          <div className="absolute -inset-2 flex items-center justify-center overflow-visible">
+                            <div className="w-16 h-px bg-red-700 rotate-45 shadow-sm"></div>
                           </div>
                         </div>
                       </div>
-                      <div className="text-center mt-2">
+                      <div className="mt-2">
                         <span className="text-sm font-semibold text-gray-700">Independencia</span>
                       </div>
                     </div>
                     
-                    {/* Producción - Bottom */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                    {/* Producción - Top Left */}
+                    <div className="absolute top-16 left-8 flex flex-col items-center">
                       <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
                         <Sprout className="w-6 h-6 text-green-600" />
                       </div>
-                      <div className="text-center mt-2">
+                      <div className="mt-2">
                         <span className="text-sm font-semibold text-gray-700">Producción</span>
                       </div>
                     </div>
-                    
-                    {/* Diseño - Bottom Left */}
-                    <div className="absolute bottom-12 left-4 transform -translate-x-2">
-                      <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
-                        <Tractor className="w-6 h-6 text-purple-600" />
-                      </div>
-                      <div className="text-center mt-2">
-                        <span className="text-sm font-semibold text-gray-700">Diseño</span>
-                      </div>
-                    </div>
-                    
-                    {/* Connecting lines */}
-                    <div className="absolute inset-0">
-                      <svg className="w-full h-full" viewBox="0 0 320 320">
-                        <defs>
-                          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
-                            <stop offset="100%" stopColor="#eab308" stopOpacity="0.3" />
-                          </linearGradient>
-                        </defs>
-                        {/* Lines connecting center to each concept */}
-                        <line x1="160" y1="160" x2="160" y2="52" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="160" y1="160" x2="244" y2="100" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="160" y1="160" x2="268" y2="160" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="160" y1="160" x2="244" y2="220" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="160" y1="160" x2="160" y2="268" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                        <line x1="160" y1="160" x2="76" y2="220" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-                      </svg>
-                    </div>
                   </div>
-                </div>
-                
-                {/* Bottom text */}
-                <div className="text-center">
-                  <p className="text-sm text-gray-600 font-medium">
-                    Simbiosis perfecta entre tecnología solar y agricultura sostenible
-                  </p>
                 </div>
               </div>
             </div>

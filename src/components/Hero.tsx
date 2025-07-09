@@ -31,7 +31,7 @@ export default function Hero() {
           energía solar y agricultura. Protege tus cultivos, ahorra agua y genera energía limpia.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button className="group bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2">
             Soy Agricultor
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -41,7 +41,7 @@ export default function Hero() {
             Soy Inversor
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

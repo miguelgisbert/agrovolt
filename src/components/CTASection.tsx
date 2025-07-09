@@ -6,9 +6,9 @@ export default function CTASection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            ¿Listo para <span className="text-yellow-300">Transformar</span> tu Granja?
+            ¿Quieres <span className="text-yellow-300">Transformar</span> tu Granja?
           </h2>
-          <p className="text-xl text-green-100 max-w-3xl mx-auto">
+          <p className="text-xl text-green-100 max-w-xl mx-auto">
             Únete a la revolución agrovoltaica y descubre cómo podemos ayudarte a maximizar 
             el potencial de tu explotación agrícola.
           </p>
@@ -77,7 +77,7 @@ export default function CTASection() {
               </div>
               <div className="flex items-center gap-2 text-gray-700">
                 <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                <span className="text-sm">Diversificación de cartera</span>
+                <span className="text-sm">Contribución a la sostenibilidad</span>
               </div>
             </div>
             

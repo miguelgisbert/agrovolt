@@ -8,7 +8,7 @@ export default function TechnologySection() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Tecnología <span className="text-blue-600">Inteligente</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-xl mx-auto">
             Sistema de monitoreo y automatización que optimiza el rendimiento de tu instalación agrovoltaica
           </p>
         </div>
