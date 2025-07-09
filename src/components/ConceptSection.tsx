@@ -103,7 +103,7 @@ export default function ConceptSection() {
                     </div>
                     
                     {/* Reducción de costes - Bottom Right */}
-                    <div className="absolute bottom-14 right-18 flex flex-col items-center">
+                    <div className="absolute bottom-16 right-10 flex flex-col items-center">
                       <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
                         <div className="flex items-center gap-0.5">
                           <Droplets className="w-4 h-4 text-cyan-600" />
