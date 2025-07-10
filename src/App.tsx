@@ -21,7 +21,7 @@ function App() {
               <Footer />
             </>
           } />
-          <Route path="/prospecto" element={<ProspectusPage />} />
+          <Route path="/agrovolt/prospecto" element={<ProspectusPage />} />
         </Routes>
       </div>
     </Router>
