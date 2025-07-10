@@ -29,7 +29,7 @@ export default function ConceptSection() {
           <div className="relative order-2 md:order-1">
             <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg">
               <img 
-                src="/src/assets/image.png" 
+                src="/agrovolt/agrovolt-system.png" 
                 alt="Sistema agrovoltaico mostrando paneles solares elevados sobre cultivos con tractor trabajando debajo"
                 className="w-full h-auto rounded-xl shadow-md"
               />
