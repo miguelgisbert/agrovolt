@@ -1,6 +1,13 @@
 import { ArrowRight, Users, TrendingUp, Phone, Mail } from "lucide-react";
 
 export default function CTASection() {
+  const handleDownloadProspectus = () => {
+    const link = document.createElement('a');
+    link.href = '/agrovolt/AgroVolt-Prospecto-Inversion-2024.pdf';
+    link.download = 'AgroVolt-Prospecto-Inversion-2024.pdf';
+    link.click();
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-green-600 to-blue-600">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
