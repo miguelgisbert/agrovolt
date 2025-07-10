@@ -33,11 +33,6 @@ export default function ConceptSection() {
                 alt="Sistema agrovoltaico mostrando paneles solares elevados sobre cultivos con tractor trabajando debajo"
                 className="w-full h-auto rounded-xl shadow-md"
               />
-              <div className="mt-4 text-center">
-                <p className="text-sm text-gray-600 italic">
-                  Diseño inteligente: los paneles elevados permiten el trabajo agrícola normal mientras generan energía limpia
-                </p>
-              </div>
             </div>
           </div>
 
@@ -76,17 +71,21 @@ export default function ConceptSection() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="flex items-center justify-center w-12 h-12 bg-yellow-100 rounded-lg flex-shrink-0">
-                <Zap className="w-6 h-6 text-yellow-600" />
+              <div className="flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg flex-shrink-0 relative">
+                <div className="relative">
+                  <Fuel className="w-6 h-6 text-red-600" />
+                  <div className="absolute -inset-2 flex items-center justify-center">
+                    <div className="w-10 h-px bg-red-700 rotate-45"></div>
+                  </div>
+                </div>
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Energía para tu Granja
+                  Independencia Energética
                 </h3>
                 <p className="text-gray-600">
-                  Genera energía limpia para bombas de riego, maquinaria y
-                  preparate para el futuro de tractores eléctricos,
-                  independizándote de las fluctuaciones del precio del gasóleo.
+                  Libérate de las fluctuaciones del precio del gasóleo. Genera tu propia energía limpia 
+                  para bombas de riego, maquinaria agrícola y prepárate para el futuro de tractores eléctricos.
                 </p>
               </div>
             </div>
