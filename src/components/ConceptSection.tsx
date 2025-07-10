@@ -25,7 +25,19 @@ export default function ConceptSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+          {/* Image section - now first on mobile, second on desktop */}
+          <div className="relative order-2 md:order-1">
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg">
+              <img 
+                src="/agrovolt/image.png" 
+                alt="Sistema agrovoltaico mostrando paneles solares elevados sobre cultivos con tractor trabajando debajo"
+                className="w-full h-auto rounded-xl shadow-md"
+              />
+            </div>
+          </div>
+
+          {/* Content section */}
+          <div className="space-y-8 order-1 md:order-2">
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg flex-shrink-0">
                 <Shield className="w-6 h-6 text-green-600" />
@@ -59,17 +71,21 @@ export default function ConceptSection() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="flex items-center justify-center w-12 h-12 bg-yellow-100 rounded-lg flex-shrink-0">
-                <Zap className="w-6 h-6 text-yellow-600" />
+              <div className="flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg flex-shrink-0 relative">
+                <div className="relative">
+                  <Fuel className="w-6 h-6 text-red-600" />
+                  <div className="absolute -inset-2 flex items-center justify-center">
+                    <div className="w-10 h-px bg-red-700 rotate-45"></div>
+                  </div>
+                </div>
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Energía para tu Granja
+                  Independencia Energética
                 </h3>
                 <p className="text-gray-600">
-                  Genera energía limpia para bombas de riego, maquinaria y
-                  preparate para el futuro de tractores eléctricos,
-                  independizándote de las fluctuaciones del precio del gasóleo.
+                  Libérate de las fluctuaciones del precio del gasóleo. Genera tu propia energía limpia 
+                  para bombas de riego, maquinaria agrícola y prepárate para el futuro de tractores eléctricos.
                 </p>
               </div>
             </div>
@@ -92,95 +108,55 @@ export default function ConceptSection() {
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="relative">
-            <div className="bg-gradient-to-br from-green-50 to-yellow-50 rounded-2xl p-8 shadow-lg">
-              <div className="space-y-8">
-                {/* Central diagram */}
-                <div className="relative flex justify-center">
-                  <div className="w-80 h-80 relative">
-                    {/* Central circle */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-green-500 to-yellow-500 rounded-full flex flex-col items-center justify-center shadow-lg">
-                      <span className="text-white font-bold text-xs">AGRO</span>
-                      <span className="text-white font-bold text-xs">VOLT</span>
-                    </div>
-
-                    {/* Surrounding concepts */}
-                    {/* Energía - Top */}
-                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-                      <div className="bg-yellow-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
-                        <Zap className="w-6 h-6 text-yellow-600" />
-                      </div>
-                      <div className="mt-2">
-                        <span className="text-sm font-semibold text-gray-700">
-                          Energía
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Protección - Top Right */}
-                    <div className="absolute top-16 right-8 flex flex-col items-center">
-                      <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
-                        <Shield className="w-6 h-6 text-blue-600" />
-                      </div>
-                      <div className="mt-2">
-                        <span className="text-sm font-semibold text-gray-700">
-                          Protección
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Reducción de costes - Bottom Right */}
-                    <div className="absolute bottom-14 right-10 flex flex-col items-center">
-                      <div className="bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative">
-                        <div className="flex items-center gap-0.5">
-                          <Droplets className="w-4 h-4 text-cyan-600" />
-                          <Plug className="w-4 h-4 text-cyan-600" />
-                        </div>
-                      </div>
-                      <div className="mt-2">
-                        <div className="text-center">
-                          <div className="text-sm font-semibold text-gray-700">
-                            Reducción
-                          </div>
-                          <div className="text-sm font-semibold text-gray-700">
-                            de costes
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Independencia - Bottom Left */}
-                    <div className="absolute bottom-16 left-7 flex flex-col items-center">
-                      <div className="bg-red-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md relative overflow-visible">
-                        <div className="relative">
-                          <Fuel className="w-6 h-6 text-red-600" />
-                          <div className="absolute -inset-2 flex items-center justify-center overflow-visible">
-                            <div className="w-16 h-px bg-red-700 rotate-45 shadow-sm"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="mt-2">
-                        <span className="text-sm font-semibold text-gray-700">
-                          Independencia
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Producción - Top Left */}
-                    <div className="absolute top-16 left-8 flex flex-col items-center">
-                      <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
-                        <Sprout className="w-6 h-6 text-green-600" />
-                      </div>
-                      <div className="mt-2">
-                        <span className="text-sm font-semibold text-gray-700">
-                          Producción
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        {/* Benefits summary section */}
+        <div className="mt-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Beneficios Clave del Sistema AgroVolt
+            </h3>
+          </div>
+          
+          <div className="grid md:grid-cols-5 gap-6">
+            <div className="text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
+                <Zap className="w-8 h-8 text-yellow-300" />
               </div>
+              <h4 className="font-semibold mb-2">Energía Limpia</h4>
+              <p className="text-sm text-green-100">Genera electricidad mientras cultivas</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
+                <Shield className="w-8 h-8 text-blue-300" />
+              </div>
+              <h4 className="font-semibold mb-2">Protección</h4>
+              <p className="text-sm text-green-100">Escudo contra granizo y clima extremo</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
+                <Droplets className="w-8 h-8 text-cyan-300" />
+              </div>
+              <h4 className="font-semibold mb-2">Ahorro de Agua</h4>
+              <p className="text-sm text-green-100">Hasta 40% menos consumo de riego</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
+                <Tractor className="w-8 h-8 text-green-300" />
+              </div>
+              <h4 className="font-semibold mb-2">Acceso Total</h4>
+              <p className="text-sm text-green-100">Maquinaria trabaja sin restricciones</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
+                <Sprout className="w-8 h-8 text-green-300" />
+              </div>
+              <h4 className="font-semibold mb-2">Mejor Cultivo</h4>
+              <p className="text-sm text-green-100">Condiciones optimizadas de crecimiento</p>
             </div>
           </div>
         </div>
