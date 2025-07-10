@@ -86,10 +86,13 @@ export default function CTASection() {
                 <TrendingUp className="w-5 h-5" />
                 Oportunidades de Inversión
               </button>
-              <button className="w-full border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-50 py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2">
+              <a 
+                href="/prospecto" 
+                className="w-full border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-50 py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2"
+              >
                 <ArrowRight className="w-5 h-5" />
                 Descargar Prospecto
-              </button>
+              </a>
             </div>
           </div>
         </div>
