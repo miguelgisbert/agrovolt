@@ -1,9 +1,8 @@
 import {
   Shield,
-  Droplets,
+  Droplet,
   Zap,
   Tractor,
-  Sun,
   Sprout,
   Plug,
   Fuel,
@@ -28,8 +27,8 @@ export default function ConceptSection() {
           {/* Image section - now first on mobile, second on desktop */}
           <div className="relative order-2 md:order-1">
             <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg">
-              <img 
-                src="/agrovolt/image.png" 
+              <img
+                src="/image.png"
                 alt="Sistema agrovoltaico mostrando paneles solares elevados sobre cultivos con tractor trabajando debajo"
                 className="w-full h-auto rounded-xl shadow-md"
               />
@@ -56,7 +55,7 @@ export default function ConceptSection() {
 
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg flex-shrink-0">
-                <Droplets className="w-6 h-6 text-blue-600" />
+                <Droplet className="w-6 h-6 text-blue-600" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -84,8 +83,9 @@ export default function ConceptSection() {
                   Independencia Energética
                 </h3>
                 <p className="text-gray-600">
-                  Libérate de las fluctuaciones del precio del gasóleo. Genera tu propia energía limpia 
-                  para bombas de riego, maquinaria agrícola y prepárate para el futuro de tractores eléctricos.
+                  Libérate de las fluctuaciones del precio del gasóleo. Genera
+                  tu propia energía limpia para bombas de riego, maquinaria
+                  agrícola y prepárate para el futuro de tractores eléctricos.
                 </p>
               </div>
             </div>
@@ -117,46 +117,56 @@ export default function ConceptSection() {
               Beneficios Clave del Sistema AgroVolt
             </h3>
           </div>
-          
+
           <div className="grid md:grid-cols-5 gap-6">
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
                 <Zap className="w-8 h-8 text-yellow-300" />
               </div>
               <h4 className="font-semibold mb-2">Energía Limpia</h4>
-              <p className="text-sm text-green-100">Genera electricidad mientras cultivas</p>
+              <p className="text-sm text-green-100 max-w-40 mx-auto">
+                Genera electricidad mientras cultivas
+              </p>
             </div>
-            
+
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
                 <Shield className="w-8 h-8 text-blue-300" />
               </div>
               <h4 className="font-semibold mb-2">Protección</h4>
-              <p className="text-sm text-green-100">Escudo contra granizo y clima extremo</p>
+              <p className="text-sm text-green-100 max-w-40 mx-auto">
+                Escudo contra granizo y clima extremo
+              </p>
             </div>
-            
+
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
-                <Droplets className="w-8 h-8 text-cyan-300" />
+                <Droplet className="w-8 h-8 text-cyan-300" />
               </div>
               <h4 className="font-semibold mb-2">Ahorro de Agua</h4>
-              <p className="text-sm text-green-100">Hasta 40% menos consumo de riego</p>
+              <p className="text-sm text-green-100 max-w-40 mx-auto">
+                Hasta 40% menos consumo de riego
+              </p>
             </div>
-            
+
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
                 <Tractor className="w-8 h-8 text-green-300" />
               </div>
               <h4 className="font-semibold mb-2">Acceso Total</h4>
-              <p className="text-sm text-green-100">Maquinaria trabaja sin restricciones</p>
+              <p className="text-sm text-green-100 max-w-40 mx-auto">
+                Maquinaria trabaja sin restricciones
+              </p>
             </div>
-            
+
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
                 <Sprout className="w-8 h-8 text-green-300" />
               </div>
               <h4 className="font-semibold mb-2">Mejor Cultivo</h4>
-              <p className="text-sm text-green-100">Condiciones optimizadas de crecimiento</p>
+              <p className="text-sm text-green-100 max-w-40 mx-auto">
+                Condiciones optimizadas de crecimiento
+              </p>
             </div>
           </div>
         </div>
