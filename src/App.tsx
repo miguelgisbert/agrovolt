@@ -1,18 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Hero from './components/Hero';
-import ConceptSection from './components/ConceptSection';
-import TechnologySection from './components/TechnologySection';
-import CTASection from './components/CTASection';
-import Footer from './components/Footer';
-import ProspectusPage from './pages/ProspectusPage';
+import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Hero from "./components/Hero";
+import ConceptSection from "./components/ConceptSection";
+import TechnologySection from "./components/TechnologySection";
+import CTASection from "./components/CTASection";
+import Footer from "./components/Footer";
+import ProspectusPage from "./pages/ProspectusPage";
+import { initGA, usePageTracking } from "./utils/analytics";
 
-function App() {
+function AppContent() {
+  // Hook para trackear page views automàticament
+  usePageTracking();
+
   return (
-    <Router>
-      <div className="min-h-screen">
-        <Routes>
-          <Route path="/" element={
+    <div className="min-h-screen">
+      <Routes>
+        <Route
+          path="/"
+          element={
             <>
               <Hero />
               <ConceptSection />
@@ -20,10 +25,23 @@ function App() {
               <CTASection />
               <Footer />
             </>
-          } />
-          <Route path="/prospecto" element={<ProspectusPage />} />
-        </Routes>
-      </div>
+          }
+        />
+        <Route path="/prospecto" element={<ProspectusPage />} />
+      </Routes>
+    </div>
+  );
+}
+
+function App() {
+  useEffect(() => {
+    // Inicialitzar Google Analytics quan l'app es carregui
+    initGA();
+  }, []);
+
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
