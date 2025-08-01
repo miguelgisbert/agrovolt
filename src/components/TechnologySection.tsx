@@ -21,7 +21,7 @@ export default function TechnologySection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Sensores Ambientales</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-pretty">
                   Monitoreo en tiempo real de humedad, temperatura, luz solar y condiciones meteorológicas 
                   para optimizar el crecimiento de tus cultivos.
                 </p>
@@ -34,7 +34,7 @@ export default function TechnologySection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Predicción Meteorológica</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-pretty">
                   Integración con servicios meteorológicos para anticipar tormentas y granizo, 
                   activando automáticamente las protecciones.
                 </p>
@@ -47,7 +47,7 @@ export default function TechnologySection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Automatización</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-pretty">
                   Las placas se ajustan automáticamente: inclinadas para generar energía o 
                   horizontales para máxima protección durante tormentas.
                 </p>
@@ -60,7 +60,7 @@ export default function TechnologySection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Análisis de Datos</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-pretty">
                   Dashboard completo con métricas de producción energética, estado de cultivos 
                   y optimización de recursos.
                 </p>

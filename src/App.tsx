@@ -34,8 +34,9 @@ function AppContent() {
 }
 
 function App() {
+  
+  // Google Analytics initialization
   useEffect(() => {
-    // Inicialitzar Google Analytics quan l'app es carregui
     initGA();
   }, []);
 

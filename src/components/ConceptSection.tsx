@@ -45,7 +45,7 @@ export default function ConceptSection() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Protección Inteligente
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-pretty">
                   Las placas solares protegen tus cultivos del granizo, lluvia
                   intensa y exceso de radiación a medio día, mientras permiten
                   el paso de luz solar beneficiosa en las horas óptimas.
@@ -61,7 +61,7 @@ export default function ConceptSection() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Gestión del Agua
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-pretty">
                   Reduce el consumo de agua de riego hasta un 40% gracias a la
                   sombra parcial, mientras recolectas agua de lluvia y del
                   rocío.
@@ -82,10 +82,10 @@ export default function ConceptSection() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Independencia Energética
                 </h3>
-                <p className="text-gray-600">
-                  Libérate de las fluctuaciones del precio del gasóleo. Genera
+                <p className="text-gray-600 text-pretty">
+                  Libérate de las fluctuaciones del precio del gasóleo y las eléctricas. Genera
                   tu propia energía limpia para bombas de riego, maquinaria
-                  agrícola y prepárate para el futuro de tractores eléctricos.
+                  agrícola y prepárate para los nuevos tractores eléctricos.
                 </p>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function ConceptSection() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Diseño Inteligente
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-pretty">
                   Estructura con poste central que permite el paso libre de
                   tractores y maquinaria entre cultivos, optimizando el espacio
                   y permitiendo a los cabezales o aperos de cosechadoras o otras

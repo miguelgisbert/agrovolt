@@ -2,15 +2,15 @@ import { ArrowRight, Users, TrendingUp, Phone, Mail } from "lucide-react";
 import { trackEvent } from "../utils/analytics";
 
 export default function CTASection() {
-  const handleDownloadProspectus = () => {
-    // Tracking del click en descargar prospecto
-    trackEvent("download", "prospectus", "investor_prospectus_pdf");
+  // const handleDownloadProspectus = () => {
+  //   // Tracking del click en descargar prospecto
+  //   trackEvent("download", "prospectus", "investor_prospectus_pdf");
 
-    const link = document.createElement("a");
-    link.href = "/agrovolt/AgroVolt-Prospecto-Inversion-2024.pdf";
-    link.download = "AgroVolt-Prospecto-Inversion-2024.pdf";
-    link.click();
-  };
+  //   const link = document.createElement("a");
+  //   link.href = "/agrovolt/AgroVolt-Prospecto-Inversion-2024.pdf";
+  //   link.download = "AgroVolt-Prospecto-Inversion-2024.pdf";
+  //   link.click();
+  // };
 
   const handleEmailClick = (emailType: string) => {
     // Tracking dels clicks en email
@@ -23,7 +23,7 @@ export default function CTASection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             ¿Quieres <span className="text-yellow-300">Transformar</span> tu
-            Granja?
+            explotación?
           </h2>
           <p className="text-xl text-green-100 max-w-xl mx-auto">
             Únete a la revolución agrovoltaica y descubre cómo podemos ayudarte
@@ -125,7 +125,7 @@ export default function CTASection() {
               </a>
               <span
                 className="w-full border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-50 py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2 cursor-pointer relative group"
-                onClick={handleDownloadProspectus}
+                // onClick={handleDownloadProspectus}
               >
                 <ArrowRight className="w-5 h-5" />
                 Descargar Prospecto

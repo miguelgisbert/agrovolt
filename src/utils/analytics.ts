@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 // Google Analytics configuration
-export const GA_TRACKING_ID = "G-87D4DHF2PG"; // 🔥 CANVIA AIXÒ pel teu ID real de Google Analytics
+export const GA_TRACKING_ID = "G-38T1ZSFVPX";
 
 // Extensión del tipo Window para incluir dataLayer y gtag
 declare global {

@@ -1,6 +1,36 @@
 import { Sun, Sprout, Mail, Linkedin, Instagram } from "lucide-react";
+import { useState } from "react";
 
 export default function Footer() {
+  // Newsletter form state
+  const [newsletterStatus, setNewsletterStatus] = useState<
+    null | "success" | "error"
+  >(null);
+
+  // Handler for form submission
+  const handleNewsletterSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setNewsletterStatus("success");
+        form.reset();
+      } else {
+        setNewsletterStatus("error");
+      }
+    } catch {
+      setNewsletterStatus("error");
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -124,6 +154,54 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Newsletter Form */}
+        <div className="mt-12 max-w-xl mx-auto bg-gray-800 rounded-2xl p-6 flex flex-col items-center shadow-lg">
+          <h4 className="text-xl font-semibold mb-5 text-white">
+            ¡Recibe novedades!
+          </h4>
+          {newsletterStatus === "success" ? (
+            <div className="w-full text-center">
+              <p className="text-green-400 font-semibold">
+                ¡Gracias! Tu email se ha registrado correctamente.
+              </p>
+            </div>
+          ) : newsletterStatus === "error" ? (
+            <div className="w-full text-center">
+              <p className="text-red-400 font-semibold">
+                Ha ocurrido un error. Inténtalo de nuevo más tarde.
+              </p>
+            </div>
+          ) : (
+            <form
+              action="https://formspree.io/f/xanbbrlv"
+              method="POST"
+              className="flex flex-col sm:flex-row gap-3 w-full justify-center items-center"
+              onSubmit={handleNewsletterSubmit}
+            >
+              <label htmlFor="newsletter-email" className="sr-only">
+                Correo electrónico
+              </label>
+              <input
+                id="newsletter-email"
+                type="email"
+                name="email"
+                required
+                placeholder="Tu correo electrónico"
+                className="px-4 py-2 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-400 w-full sm:w-auto min-w-[220px]"
+              />
+              <button
+                type="submit"
+                className="px-6 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold transition-colors"
+              >
+                Enviar
+              </button>
+            </form>
+          )}
+          <p className="text-xs text-gray-400 mt-2 text-center">
+            No enviaremos spam. Puedes darte de baja en cualquier momento.
+          </p>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
