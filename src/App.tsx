@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import ConceptSection from "./components/ConceptSection";
@@ -35,14 +35,16 @@ function AppContent() {
 
 function App() {
   
-  // Google Analytics initialization
+   const [gaReady, setGaReady] = useState(false);
+
   useEffect(() => {
     initGA();
+    setGaReady(true);
   }, []);
 
   return (
     <Router>
-      <AppContent />
+      {gaReady && <AppContent />}
     </Router>
   );
 }
