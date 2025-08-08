@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import ConceptSection from "./components/ConceptSection";
@@ -6,7 +5,7 @@ import TechnologySection from "./components/TechnologySection";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 import ProspectusPage from "./pages/ProspectusPage";
-import { initGA, usePageTracking } from "./utils/analytics";
+import { usePageTracking } from "./utils/analytics";
 
 function AppContent() {
   // Hook para trackear page views automàticament
@@ -35,16 +34,9 @@ function AppContent() {
 
 function App() {
   
-   const [gaReady, setGaReady] = useState(false);
-
-  useEffect(() => {
-    initGA();
-    setGaReady(true);
-  }, []);
-
-  return (
+    return (
     <Router>
-      {gaReady && <AppContent />}
+      <AppContent />
     </Router>
   );
 }
