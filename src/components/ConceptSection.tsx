@@ -4,7 +4,6 @@ import {
   Zap,
   Tractor,
   Sprout,
-  Plug,
   Fuel,
 } from "lucide-react";
 

@@ -1,20 +1,11 @@
 import { ArrowRight, Users, TrendingUp, Phone, Mail } from "lucide-react";
-import { trackEvent } from "../utils/analytics";
 
 export default function CTASection() {
   const handleDownloadProspectus = () => {
-    // Tracking del click en descargar prospecto
-    trackEvent("download", "prospectus", "investor_prospectus_pdf");
-
     const link = document.createElement("a");
     link.href = "/Prospecto_AgroVolt.pdf";
     link.download = "AgroVolt-Prospecto-Inversion-2025.pdf";
     link.click();
-  };
-
-  const handleEmailClick = (emailType: string) => {
-    // Tracking dels clicks en email
-    trackEvent("email_click", "contact", emailType);
   };
 
   return (
@@ -66,7 +57,6 @@ export default function CTASection() {
               <a
                 href="mailto:info@agrovolt.es?subject=Consulta%20Gratuita%20-%20Agricultor&body=Hola,%0D%0A%0D%0AMe%20interesa%20una%20consulta%20gratuita%20sobre%20soluciones%20agrovoltaicas%20para%20mi%20explotación%20agrícola.%0D%0A%0D%0AGracias."
                 className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2"
-                onClick={() => handleEmailClick("farmer_consultation")}
               >
                 <Phone className="w-5 h-5" />
                 Solicitar Consulta Gratuita
@@ -74,7 +64,6 @@ export default function CTASection() {
               <a
                 href="mailto:info@agrovolt.es?subject=Más%20Información%20-%20Agricultor&body=Hola,%0D%0A%0D%0AMe%20gustaría%20recibir%20más%20información%20sobre%20sus%20servicios%20agrovoltaicos.%0D%0A%0D%0AGracias."
                 className="w-full border-2 border-green-600 text-green-600 hover:bg-green-50 py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2"
-                onClick={() => handleEmailClick("farmer_info")}
               >
                 <Mail className="w-5 h-5" />
                 Más Información
@@ -118,7 +107,6 @@ export default function CTASection() {
               <a
                 href="mailto:info@agrovolt.es?subject=Oportunidades%20de%20Inversión%20-%20Agrovoltaica&body=Hola,%0D%0A%0D%0AMe%20interesa%20conocer%20las%20oportunidades%20de%20inversión%20en%20proyectos%20agrovoltaicos.%0D%0A%0D%0AGracias."
                 className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2"
-                onClick={() => handleEmailClick("investor_opportunities")}
               >
                 <TrendingUp className="w-5 h-5" />
                 Oportunidades de Inversión

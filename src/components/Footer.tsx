@@ -206,6 +206,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
           <p>&copy; 2025 AgroVolt. Todos los derechos reservados.</p>
+          <p>03110 Mutxamel (Spain)</p>
         </div>
       </div>
     </footer>

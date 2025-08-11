@@ -4,12 +4,8 @@ import ConceptSection from "./components/ConceptSection";
 import TechnologySection from "./components/TechnologySection";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
-import ProspectusPage from "./pages/ProspectusPage";
-import { usePageTracking } from "./utils/analytics";
 
 function AppContent() {
-  // Hook para trackear page views automàticament
-  usePageTracking();
 
   return (
     <div className="min-h-screen">
@@ -26,7 +22,6 @@ function AppContent() {
             </>
           }
         />
-        <Route path="/prospecto" element={<ProspectusPage />} />
       </Routes>
     </div>
   );
