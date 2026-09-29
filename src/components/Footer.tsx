@@ -1,13 +1,26 @@
-import { Sun, Sprout, Mail, Linkedin, Instagram } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Sprout, Sun, Mail, MapPin } from "lucide-react";
+import { SITE } from "../data/site";
+
+const NAVIGATION = [
+  { to: "/", label: "Inicio" },
+  { to: "/app", label: "Demo de la app" },
+  { to: "/blog", label: "Blog" },
+  { to: "/faq", label: "Preguntas frecuentes" },
+  { to: "/contacto", label: "Contacto" },
+];
+
+const LEGAL = [
+  { to: "/privacidad", label: "Política de privacidad" },
+  { to: "/cookies", label: "Política de cookies" },
+];
 
 export default function Footer() {
-  // Newsletter form state
   const [newsletterStatus, setNewsletterStatus] = useState<
     null | "success" | "error"
   >(null);
 
-  // Handler for form submission
   const handleNewsletterSubmit = async (
     e: React.FormEvent<HTMLFormElement>
   ) => {
@@ -34,132 +47,78 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-5 gap-8">
-          {/* Brand */}
-          <div className="col-span-2">
+        <div className="grid md:grid-cols-4 gap-10">
+          <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center gap-1">
-                <Sprout className="w-6 h-6 text-green-400" />
-                <Sun className="w-6 h-6 text-yellow-400" />
-              </div>
+              <Sprout className="w-6 h-6 text-green-400" />
+              <Sun className="w-6 h-6 text-yellow-400" />
               <span className="text-2xl font-bold">
                 <span className="text-green-400">Agro</span>
                 <span className="text-yellow-400">Volt</span>
               </span>
             </div>
             <p className="text-gray-400 mb-4 max-w-sm">
-              Revolucionando la agricultura con energía solar. Protegemos tus
-              cultivos mientras generas energía limpia para un futuro
-              sostenible.
+              Sistemas agrovoltaicos para explotaciones agrícolas: protección
+              antigranizo, ahorro de agua de riego y energía propia, con control
+              total desde el móvil.
             </p>
+            <div className="space-y-2 text-sm text-gray-400">
+              <a
+                href={`mailto:${SITE.email}`}
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <Mail className="w-4 h-4" /> {SITE.email}
+              </a>
+              <span className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" /> {SITE.location}
+              </span>
+            </div>
           </div>
 
-          {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Servicios</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <span className="hover:text-white transition-colors cursor-pointer relative group inline-block">
-                  Instalación Agrovoltaica
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    En construcción
-                  </span>
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-white transition-colors cursor-pointer relative group inline-block">
-                  Consultoría Técnica
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    En construcción
-                  </span>
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-white transition-colors cursor-pointer relative group inline-block">
-                  Mantenimiento
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    En construcción
-                  </span>
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-white transition-colors cursor-pointer relative group inline-block">
-                  Monitoreo Remoto
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    En construcción
-                  </span>
-                </span>
-              </li>
+            <h4 className="text-lg font-semibold mb-4">Navegación</h4>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              {NAVIGATION.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className="hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Empresa</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              {LEGAL.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className="hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
               <li>
-                <span className="hover:text-white transition-colors cursor-pointer relative group inline-block">
-                  Sobre Nosotros
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    En construcción
-                  </span>
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-white transition-colors cursor-pointer relative group inline-block">
-                  Casos de Éxito
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    En construcción
-                  </span>
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-white transition-colors cursor-pointer relative group inline-block">
-                  Blog
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    En construcción
-                  </span>
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contacto</h4>
-            <div className="space-y-4">
-              <div className="flex items-center gap-2 text-gray-400">
-                <Mail className="w-4 h-4" />
                 <a
-                  href="mailto:info@agrovolt.es"
+                  href="/Prospecto_AgroVolt.pdf"
                   className="hover:text-white transition-colors"
                 >
-                  info@agrovolt.es
+                  Prospecto de inversión
                 </a>
-              </div>
-
-              <div className="flex space-x-4">
-                <span className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group">
-                  <Linkedin className="w-5 h-5" />
-                  <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    En construcción
-                  </span>
-                </span>
-                <span className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group">
-                  <Instagram className="w-5 h-5" />
-                  <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    En construcción
-                  </span>
-                </span>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Newsletter Form */}
         <div className="mt-12 max-w-xl mx-auto bg-gray-800 rounded-2xl p-6 flex flex-col items-center shadow-lg">
           <h4 className="text-xl font-semibold mb-5 text-white">
-            ¡Recibe novedades!
+            Novedades sobre agrovoltaica
           </h4>
           {newsletterStatus === "success" ? (
             <div className="w-full text-center">
@@ -200,13 +159,16 @@ export default function Footer() {
             </form>
           )}
           <p className="text-xs text-gray-400 mt-2 text-center">
-            No enviaremos spam. Puedes darte de baja en cualquier momento.
+            Sin spam. Puedes darte de baja en cualquier momento.
           </p>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 AgroVolt. Todos los derechos reservados.</p>
-          <p>03110 Mutxamel (Spain)</p>
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
+          <p suppressHydrationWarning>
+            © {new Date().getFullYear()} AgroVolt. Todos los derechos
+            reservados.
+          </p>
+          <p>{SITE.location}</p>
         </div>
       </div>
     </footer>

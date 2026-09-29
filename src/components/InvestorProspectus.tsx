@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   TrendingUp, 
   DollarSign, 
@@ -21,7 +20,7 @@ export default function InvestorProspectus() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-8 print:py-4">
+      <header className="bg-gradient-to-r from-green-700 to-green-600 text-white py-8 print:py-4">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -49,7 +48,7 @@ export default function InvestorProspectus() {
         
         {/* Executive Summary */}
         <section className="mb-12 print:mb-8">
-          <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 print:p-4">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 print:p-4">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
               <Target className="w-8 h-8 text-green-600" />
               Resumen Ejecutivo
@@ -155,7 +154,7 @@ export default function InvestorProspectus() {
           </div>
 
           {/* Infographic */}
-          <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-8 print:p-4">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 print:p-4">
             <h3 className="text-xl font-semibold text-center text-gray-900 mb-6">Esquema del Sistema AgroVolt</h3>
             <div className="relative">
               <img 
@@ -298,7 +297,7 @@ export default function InvestorProspectus() {
             Oportunidad de Inversión
           </h2>
           
-          <div className="bg-gradient-to-br from-green-600 to-blue-600 rounded-2xl p-8 text-white mb-8">
+          <div className="bg-gradient-to-br from-green-700 to-green-600 rounded-2xl p-8 text-white mb-8">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">€50M</div>
@@ -451,7 +450,7 @@ export default function InvestorProspectus() {
 
         {/* Contact and Next Steps */}
         <section className="mb-8 print:mb-4">
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-green-700 to-green-600 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Próximos Pasos</h2>
             <p className="text-xl text-green-100 mb-6">
               Únase a la revolución agrovoltaica y sea parte del futuro sostenible

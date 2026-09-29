@@ -1,3 +1,301 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+}
+
+/* ---------- Artículo del blog ---------- */
+.markdown {
+  @apply text-[17px] leading-relaxed text-gray-700;
+}
+.markdown h2 {
+  @apply text-2xl font-bold text-gray-900 mt-10 mb-4;
+}
+.markdown h3 {
+  @apply text-xl font-semibold text-gray-900 mt-8 mb-3;
+}
+.markdown p {
+  @apply mb-5;
+}
+.markdown a {
+  @apply text-green-700 underline underline-offset-2 hover:text-green-800 font-medium;
+}
+.markdown ul {
+  @apply list-disc pl-6 mb-6 space-y-2;
+}
+.markdown ol {
+  @apply list-decimal pl-6 mb-6 space-y-2;
+}
+.markdown strong {
+  @apply text-gray-900;
+}
+.markdown blockquote {
+  @apply border-l-4 border-green-500 pl-4 italic text-gray-600 my-6;
+}
+.markdown img {
+  @apply rounded-xl my-6 w-full h-auto;
+}
+.markdown hr {
+  @apply border-gray-200 my-8;
+}
+
+/* ---------- Vídeo incrustado (YouTube, formato vertical) ---------- */
+.video-embed {
+  position: relative;
+  max-width: 340px;
+  margin: 1.75rem auto;
+  aspect-ratio: 9 / 14;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #111827;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-facade {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: 0;
+  background: #111827;
+  cursor: pointer;
+  text-align: left;
+}
+.video-facade__thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  flex: none;
+}
+.video-facade__thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-facade__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease;
+}
+.video-facade__play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 11px 0 11px 18px;
+  border-color: transparent transparent transparent #111827;
+}
+.video-facade:hover .video-facade__play {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+.video-facade__meta {
+  display: block;
+  padding: 1rem 1rem 1.25rem;
+}
+.video-facade__title {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #fff;
+}
+.video-facade__hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #86efac;
+}
+.video-facade__hint::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent #86efac;
+}
+.video-facade__note {
+  display: block;
+  padding: 1rem 1.25rem 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.video-facade__credit {
+  display: block;
+  margin-top: auto;
+  padding: 0.875rem 1rem;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: #9ca3af;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Páginas legales ---------- */
+.legal h2 {
+  @apply text-xl font-semibold text-gray-900 mt-7 mb-2;
+}
+.legal p {
+  @apply mb-4;
+}
+
+/* ---------- Botón de Google Calendar ---------- */
+.google-calendar-target {
+  display: block;
+  min-height: 34px;
+}
+
+/* ---------- Slider de la demo ---------- */
+input[type="range"] {
+  @apply h-2 w-full cursor-pointer appearance-none rounded-full bg-gray-200;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: #2563eb;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #2563eb;
+  border: 3px solid #fff;
+}
+
+/* --- Cita per Google Meet (targeta del contacte) --- */
+.meet-card {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(130% 120% at 100% 0%, #166534 0%, #052e16 45%, #0a0f1d 100%);
+}
+.meet-card::before {
+  content: "";
+  position: absolute;
+  top: -14%;
+  right: -18%;
+  width: 74%;
+  aspect-ratio: 4 / 3;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 24px 24px;
+  transform: rotate(-14deg);
+  -webkit-mask-image: linear-gradient(to bottom left, #000 5%, transparent 72%);
+  mask-image: linear-gradient(to bottom left, #000 5%, transparent 72%);
+  pointer-events: none;
+}
+.meet-card::after {
+  content: "";
+  position: absolute;
+  top: -38px;
+  right: -34px;
+  width: 124px;
+  height: 124px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.5) 0%, rgba(250, 204, 21, 0) 68%);
+  pointer-events: none;
+}
+.meet-card__rule {
+  border-top: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* --- Llistes desplegables pròpies: el popup nadiu no es pot estilitzar --- */
+.field-listbox {
+  animation: field-listbox-in 140ms ease-out;
+}
+@keyframes field-listbox-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .field-listbox {
+    animation: none;
+  }
+}
+
+/* --- Overlay de reserva de Google: a mòbil ocupa gairebé tota la pantalla --- */
+.agrovolt-booking-overlay {
+  --ov-pad: 72px;
+}
+.agrovolt-booking-frame {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  border: 0;
+}
+
+/* La X va a l'extrem superior dret del modal i sense cercle negre */
+.agrovolt-booking-overlay .agrovolt-booking-close {
+  position: fixed !important;
+  top: calc(var(--ov-pad) + 12px) !important;
+  right: calc(var(--ov-pad) + 12px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: #1f1f1f !important;
+}
+.agrovolt-booking-overlay .agrovolt-booking-close .material-icons {
+  display: block !important;
+  margin: 0 !important;
+  color: inherit !important;
+}
+.agrovolt-booking-overlay .agrovolt-booking-close:hover {
+  opacity: 0.65;
+}
+
+@media (max-width: 640px) {
+  .agrovolt-booking-overlay {
+    --ov-pad: 0px;
+    padding: 0 !important;
+  }
+}

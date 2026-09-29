@@ -13,7 +13,7 @@ export default function ConceptSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            ¿Qué es la <span className="text-green-600">Agrovoltaica</span>?
+            ¿Qué es la agrovoltaica?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Un sistema innovador que combina la producción de energía solar con
@@ -25,12 +25,23 @@ export default function ConceptSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image section - now first on mobile, second on desktop */}
           <div className="relative order-2 md:order-1">
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-lg">
-              <img
-                src="/image.png"
-                alt="Sistema agrovoltaico mostrando paneles solares elevados sobre cultivos con tractor trabajando debajo"
-                className="w-full h-auto rounded-xl shadow-md"
-              />
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 shadow-lg">
+              <picture>
+                <source
+                  srcSet="/image.webp"
+                  type="image/webp"
+                  width="1068"
+                  height="674"
+                />
+                <img
+                  src="/image.png"
+                  alt="Sistema agrovoltaico mostrando paneles solares elevados sobre cultivos con tractor trabajando debajo"
+                  width="1068"
+                  height="674"
+                  loading="lazy"
+                  className="w-full h-auto rounded-xl shadow-md"
+                />
+              </picture>
             </div>
           </div>
 
@@ -82,9 +93,11 @@ export default function ConceptSection() {
                   Independencia Energética
                 </h3>
                 <p className="text-gray-600 text-pretty">
-                  Libérate de las fluctuaciones del precio del gasóleo y las eléctricas. Genera
-                  tu propia energía limpia para bombas de riego, maquinaria
-                  agrícola y prepárate para los nuevos tractores eléctricos.
+                  Libérate de las fluctuaciones del precio del gasóleo y las
+                  eléctricas. Genera tu propia energía limpia y úsala en bombas
+                  de riego, herramientas y maquinaria agrícola, y prepárate para
+                  los nuevos tractores eléctricos: la factura de la luz y el
+                  diésel dejan de comerse la mayor parte del gasto de la finca.
                 </p>
               </div>
             </div>
@@ -110,7 +123,7 @@ export default function ConceptSection() {
         </div>
 
         {/* Benefits summary section */}
-        <div className="mt-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white">
+        <div className="mt-16 bg-gradient-to-r from-green-700 to-green-600 rounded-2xl p-8 text-white">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Beneficios Clave del Sistema AgroVolt
@@ -122,9 +135,9 @@ export default function ConceptSection() {
               <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-3">
                 <Zap className="w-8 h-8 text-yellow-300" />
               </div>
-              <h4 className="font-semibold mb-2">Energía Limpia</h4>
-              <p className="text-sm text-green-100 max-w-40 mx-auto">
-                Genera electricidad mientras cultivas
+              <h4 className="font-semibold mb-2">Energía propia</h4>
+              <p className="text-sm text-green-100 max-w-44 mx-auto">
+                Autoconsumo para bombas, herramientas y maquinaria
               </p>
             </div>
 

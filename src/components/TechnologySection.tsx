@@ -1,12 +1,14 @@
-import { Smartphone, Thermometer, Cloud, Zap, Settings, BarChart3 } from 'lucide-react';
+import { Smartphone, Thermometer, Cloud, Zap, Settings, BarChart3, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { track } from '../lib/analytics';
 
 export default function TechnologySection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Tecnología <span className="text-blue-600">Inteligente</span>
+            Tecnología inteligente
           </h2>
           <p className="text-xl text-gray-600 max-w-xl mx-auto">
             Sistema de monitoreo y automatización que optimiza el rendimiento de tu instalación agrovoltaica
@@ -66,6 +68,15 @@ export default function TechnologySection() {
                 </p>
               </div>
             </div>
+
+            <Link
+              to="/app"
+              onClick={() => track("cta_click", { location: "tecnologia" })}
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3.5 rounded-lg transition-colors self-start"
+            >
+              Probar la demo interactiva de la app
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
 
           <div className="relative">
@@ -73,7 +84,7 @@ export default function TechnologySection() {
             <div className="flex justify-center">
               <div className="relative">
                 {/* Phone frame */}
-                <div className="w-72 h-[600px] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                <div className="w-72 h-[520px] bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
                   <div className="w-full h-full bg-black rounded-[2.5rem] p-1">
                     <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
                       {/* Status bar */}
@@ -88,16 +99,16 @@ export default function TechnologySection() {
                       </div>
                       
                       {/* App content */}
-                      <div className="p-4 h-full bg-gradient-to-br from-blue-50 to-purple-50">
+                      <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50">
                         {/* Header */}
-                        <div className="flex items-center gap-2 mb-6">
-                          <Smartphone className="w-6 h-6 text-blue-600" />
+                        <div className="flex items-center gap-2 mb-4">
+                          <Smartphone className="w-6 h-6 text-green-600" />
                           <span className="text-lg font-bold text-gray-900">AgroVolt Control</span>
                         </div>
                         
                         {/* Main metrics */}
-                        <div className="space-y-4 mb-6">
-                          <div className="bg-white rounded-xl p-4 shadow-sm">
+                        <div className="space-y-3 mb-4">
+                          <div className="bg-white rounded-xl p-3 shadow-sm">
                             <div className="flex justify-between items-center mb-2">
                               <span className="text-sm text-gray-600">Producción Energética</span>
                               <span className="text-lg font-bold text-green-600">847 kWh</span>
@@ -107,7 +118,7 @@ export default function TechnologySection() {
                             </div>
                           </div>
                           
-                          <div className="bg-white rounded-xl p-4 shadow-sm">
+                          <div className="bg-white rounded-xl p-3 shadow-sm">
                             <div className="flex justify-between items-center mb-2">
                               <span className="text-sm text-gray-600">Humedad del Suelo</span>
                               <span className="text-lg font-bold text-blue-600">68%</span>
@@ -117,7 +128,7 @@ export default function TechnologySection() {
                             </div>
                           </div>
                           
-                          <div className="bg-white rounded-xl p-4 shadow-sm">
+                          <div className="bg-white rounded-xl p-3 shadow-sm">
                             <div className="flex justify-between items-center">
                               <span className="text-sm text-gray-600">Estado de Protección</span>
                               <span className="text-sm font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">Activo</span>
@@ -127,12 +138,12 @@ export default function TechnologySection() {
 
                         {/* Status indicators */}
                         <div className="grid grid-cols-2 gap-3">
-                          <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+                          <div className="bg-white rounded-xl p-3 text-center shadow-sm">
                             <Zap className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
                             <div className="text-sm font-semibold text-gray-900">Generando</div>
                             <div className="text-xs text-gray-600">2.4 kW</div>
                           </div>
-                          <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+                          <div className="bg-white rounded-xl p-3 text-center shadow-sm">
                             <Cloud className="w-8 h-8 text-blue-500 mx-auto mb-2" />
                             <div className="text-sm font-semibold text-gray-900">Clima</div>
                             <div className="text-xs text-gray-600">Soleado</div>
