@@ -164,6 +164,16 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
+          <p className="mb-2">
+            <a
+              href="https://miguelgisbert.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 hover:text-green-300 transition-colors"
+            >
+              Miguel Gisbert
+            </a>
+          </p>
           <p suppressHydrationWarning>
             © {new Date().getFullYear()} AgroVolt. Todos los derechos
             reservados.

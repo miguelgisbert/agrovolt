@@ -1,12 +1,14 @@
 Asunto: Piloto agrovoltaico en Alicante – colaboración con instalador
 
-Hola [Nombre],
+Hola equipo de [Empresa],
 
-Soy Miguel Gisbert, de AgroVolt (agrovolt.es). Estamos desarrollando un sistema de agrovoltaica para explotaciones agrícolas: paneles elevados e inclinables que protegen el cultivo, reducen hasta un 40% el agua de riego y generan energía para la finca.
+Soy Miguel Gisbert, Ingeniero de Software por la Universidad de Alicante, y estoy desarrollando AgroVolt (agrovolt.es): un sistema de agrovoltaica para explotaciones agrícolas con paneles elevados e inclinables que protegen el cultivo, reducen hasta un 40% el agua de riego y generan energía para la finca.
 
 [OPCIONAL: He visto que ...]
 
-Busco un partner técnico para presentar una propuesta conjunta a explotaciones agrícolas de la zona de Alicante. No busco inversión: busco vuestra experiencia en estructura e instalación. La idea es que juntos podamos presentar el proyecto a nuevos clientes: yo aporto el diseño agrovoltaico, el software y la parte agronómica; vosotros, la ingeniería, la estructura y la instalación.
+Mi aportación es la parte técnica y digital: la app de control y monitorización, el software de gestión, el diseño técnico de la solución y la integración de sensores, paneles y riego.
+
+Busco un socio técnico para presentar una propuesta conjunta a explotaciones agrícolas de la zona de Alicante. No busco inversión: busco vuestra experiencia en estructura e instalación. La idea es que juntos podamos presentar el proyecto a nuevos clientes: yo aporto software, app, diseño técnico y la parte digital; vosotros, la ingeniería estructural, la instalación y la puesta en marcha.
 
 Podemos buscar 2-3 fincas juntos y hacer un pre-estudio gratuito. Si encaja, hacemos el piloto y vosotros lo instaláis. ¿Tendrías 30 minutos para explorar si tiene sentido?
 
@@ -15,4 +17,4 @@ Podéis ver el proyecto en https://agrovolt.es
 Gracias,
 Miguel Gisbert
 AgroVolt · agrovolt.es
-miguel.gisbert@agrovolt.es · [teléfono]
+miguel.gisbert@agrovolt.es · 655850243

@@ -4,7 +4,7 @@ Actualitzat: 26/10/2026
 
 > **Filtre:** només empreses instal·ladores/EPC amb capacitat de dissenyar, executar i, si cal, finançar una instal·lació. Fora finques, associacions i intermediaris.
 >
-> **Objectiu:** partner tècnic per a un primer pilot. No demanar inversió; oferir un pre-estudi gratuït per a un client seu.
+> **Objectiu:** soci tècnic per a una proposta conjunta a nous clients. No pressuposar que tenen clients agrícoles; buscar junts 2-3 finques i oferir un pre-estudi gratuït.
 
 ---
 
@@ -76,13 +76,15 @@ Després, els grans EPC i els competidors, només per aprendre o per una alianç
 ### Versió text (per a l'API o el camp `text`)
 
 ```text
-Hola [Nombre],
+Hola equipo de [Empresa],
 
-Soy Miguel Gisbert, de AgroVolt (agrovolt.es). Estamos desarrollando un sistema de agrovoltaica para explotaciones agrícolas: paneles elevados e inclinables que protegen el cultivo, reducen hasta un 40% el agua de riego y generan energía para la finca.
+Soy Miguel Gisbert, Ingeniero de Software por la Universidad de Alicante, y estoy desarrollando AgroVolt (agrovolt.es): un sistema de agrovoltaica para explotaciones agrícolas con paneles elevados e inclinables que protegen el cultivo, reducen hasta un 40% el agua de riego y generan energía para la finca.
 
 [LÍNIA OPCIONAL: He visto que ...]
 
-Busco un partner técnico para presentar una propuesta conjunta a explotaciones agrícolas de la zona de Alicante. No busco inversión: busco vuestra experiencia en estructura e instalación. La idea es que juntos podamos presentar el proyecto a nuevos clientes: yo aporto el diseño agrovoltaico, el software y la parte agronómica; vosotros, la ingeniería, la estructura y la instalación.
+Mi aportación es la parte técnica y digital: la app de control y monitorización, el software de gestión, el diseño técnico de la solución y la integración de sensores, paneles y riego.
+
+Busco un socio técnico para presentar una propuesta conjunta a explotaciones agrícolas de la zona de Alicante. No busco inversión: busco vuestra experiencia en estructura e instalación. La idea es que juntos podamos presentar el proyecto a nuevos clientes: yo aporto software, app, diseño técnico y la parte digital; vosotros, la ingeniería estructural, la instalación y la puesta en marcha.
 
 Podemos buscar 2-3 fincas juntos y hacer un pre-estudio gratuito. Si encaja, hacemos el piloto y vosotros lo instaláis. ¿Tendrías 30 minutos para explorar si tiene sentido?
 
@@ -91,20 +93,22 @@ Podéis ver el proyecto en https://agrovolt.es
 Gracias,
 Miguel Gisbert
 AgroVolt · agrovolt.es
-miguel.gisbert@agrovolt.es · [teléfono]
+miguel.gisbert@agrovolt.es · 655850243
 ```
 
 ### Versió HTML (per al dashboard o l'API de Resend)
 
 ```html
-<p>Hola [Nombre],</p>
+<p>Hola equipo de [Empresa],</p>
 
-<p>Soy Miguel Gisbert, de <a href="https://agrovolt.es">AgroVolt</a>. Estamos desarrollando un sistema de agrovoltaica para explotaciones agrícolas: paneles elevados e inclinables que protegen el cultivo, reducen hasta un 40% el agua de riego y generan energía para la finca.</p>
+<p>Soy Miguel Gisbert, <strong>Ingeniero de Software por la Universidad de Alicante</strong>, y estoy desarrollando <a href="https://agrovolt.es">AgroVolt</a>: un sistema de agrovoltaica para explotaciones agrícolas con paneles elevados e inclinables que protegen el cultivo, reducen hasta un 40% el agua de riego y generan energía para la finca.</p>
 
 <!-- OPCIONAL: si tens una referència real, afig-la ací. Si no, esborra este paràgraf. -->
 <p>He visto que [referencia concreta].</p>
 
-<p>Busco un partner técnico para presentar una propuesta conjunta a explotaciones agrícolas de la zona de Alicante. No busco inversión: busco vuestra experiencia en estructura e instalación. La idea es que juntos podamos presentar el proyecto a nuevos clientes: yo aporto el diseño agrovoltaico, el software y la parte agronómica; vosotros, la ingeniería, la estructura y la instalación.</p>
+<p>Mi aportación es la parte técnica y digital: la <strong>app de control y monitorización</strong>, el <strong>software de gestión</strong>, el <strong>diseño técnico de la solución</strong> y la integración de sensores, paneles y riego.</p>
+
+<p>Busco un socio técnico para presentar una propuesta conjunta a explotaciones agrícolas de la zona de Alicante. No busco inversión: busco vuestra experiencia en estructura e instalación. La idea es que juntos podamos presentar el proyecto a nuevos clientes: yo aporto software, app, diseño técnico y la parte digital; vosotros, la ingeniería estructural, la instalación y la puesta en marcha.</p>
 
 <p>Podemos buscar 2-3 fincas juntos y hacer un pre-estudio gratuito. Si encaja, hacemos el piloto y vosotros lo instaláis. ¿Tendrías 30 minutos para explorar si tiene sentido?</p>
 
@@ -116,7 +120,7 @@ miguel.gisbert@agrovolt.es · [teléfono]
   <img src="https://agrovolt.es/logo.png" alt="AgroVolt" width="160" style="display:block; max-width:160px; height:auto; border:0;">
 </a>
 <a href="https://agrovolt.es" target="_blank" rel="noopener">agrovolt.es</a><br>
-<a href="mailto:miguel.gisbert@agrovolt.es">miguel.gisbert@agrovolt.es</a> · [teléfono]</p>
+<a href="mailto:miguel.gisbert@agrovolt.es">miguel.gisbert@agrovolt.es</a> · 655850243</p>
 ```
 
 > **Imatge de la signatura:** he creat `public/logo-email.png` (360×107) a partir de `public/logo.svg`, però com que encara no està desplegat, el template fa servir `https://agrovolt.es/logo.png`, que ja és públic i es veu. Quan desplegues, pots canviar la URL a `https://agrovolt.es/logo-email.png` si vols més resolució. Gmail i Outlook no mostren SVG de manera fiable; per això use PNG. L'enllaç a `agrovolt.es` i l'`alt="AgroVolt"` són el fallback si la imatge no carrega.
@@ -125,8 +129,8 @@ miguel.gisbert@agrovolt.es · [teléfono]
 
 - Substitueix `[referencia concreta]` per una frase real de la llista de baix.
 - Si no tens una referència real i verificable, **esborra el paràgraf sencer** “He visto que...” i comença directament per “Busco...”. No inventes ni poses floretes genèriques.
-- Canvia `[Nombre]` pel nom de la persona o, si no en saps, pel nom de l'empresa: “Hola equipo de Ijes Solar,”.
-- Canvia `[teléfono]` pel teu telèfon.
+- Canvia `[Empresa]` pel nom de l'empresa: “Hola equipo de Ijes Solar,”.
+- El telèfon ja està configurat: 655850243.
 - Si vols, canvia “Gracias” pel teu “¡Mucha suerte!”.
 
 ### Frases reals per personalitzar
