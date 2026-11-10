@@ -37,13 +37,13 @@ Actualitzat: 26/10/2026
 
 ---
 
-## 3. Sense email públic (formulari web o telèfon)
+## 3. Altres instal·ladors (email trobat o formulari)
 
-| Empresa | Ubicació | URL | Telèfon | Notes |
-|---|---|---|---|---|
-| **Ingeniería Aplicada** | Lorquí (Múrcia) | https://ingenieriaaplicada.com | 968 782 804 | EPC i agrovoltaica; 40 MW instal·lats; projecte a Pilar de la Horadada. |
-| **Awergy** | Alacant/València | https://awergy.com | 865 572 826 | EPC; projectes a Novelda, Elda, Ibi, Alacant. |
-| **Editec Solar** | Monòver (Alacant) | https://editecsolar.es | al web | Instal·lacions agrícoles a la província d'Alacant. |
+| Empresa | Ubicació | Email | URL | Telèfon | Notes |
+|---|---|---|---|---|---|
+| **Ingeniería Aplicada** | Lorquí (Múrcia) | web@ingenieriaaplicada.com | https://ingenieriaaplicada.com | 968 782 804 | EPC i agrovoltaica; 40 MW instal·lats; projecte a Pilar de la Horadada. |
+| **Awergy** | Alacant/València | info@awergy.com | https://awergy.com | 865 572 826 | EPC; projectes a Novelda, Elda, Ibi, Alacant. |
+| **Editec Solar** | Monòver (Alacant) | info@editecsolar.es | https://editecsolar.es | 966 960 345 | Instal·lacions agrícoles a la província d'Alacant. |
 
 ---
 
