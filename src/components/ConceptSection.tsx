@@ -6,6 +6,7 @@ import {
   Sprout,
   Fuel,
 } from "lucide-react";
+import { SITE } from "../data/site";
 
 export default function ConceptSection() {
   return (
@@ -26,22 +27,40 @@ export default function ConceptSection() {
           {/* Image section - now first on mobile, second on desktop */}
           <div className="relative order-2 md:order-1">
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 shadow-lg">
-              <picture>
-                <source
-                  srcSet="/image.webp"
-                  type="image/webp"
-                  width="1068"
-                  height="674"
-                />
-                <img
-                  src="/image.png"
-                  alt="Sistema agrovoltaico mostrando paneles solares elevados sobre cultivos con tractor trabajando debajo"
-                  width="1068"
-                  height="674"
-                  loading="lazy"
-                  className="w-full h-auto rounded-xl shadow-md"
-                />
-              </picture>
+              <a
+                href={SITE.model3d}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir el modelo 3D en Trimble Connect"
+                className="block"
+              >
+                <picture>
+                  <source
+                    srcSet="/image.webp"
+                    type="image/webp"
+                    width="1068"
+                    height="674"
+                  />
+                  <img
+                    src="/image.png"
+                    alt="Sistema agrovoltaico mostrando paneles solares elevados sobre cultivos con tractor trabajando debajo"
+                    width="1068"
+                    height="674"
+                    loading="lazy"
+                    className="w-full h-auto rounded-xl shadow-md transition-opacity hover:opacity-95"
+                  />
+                </picture>
+              </a>
+              <p className="mt-2 text-center text-xs text-gray-500">
+                <a
+                  href={SITE.model3d}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-green-600"
+                >
+                  Modelo 3D
+                </a>
+              </p>
             </div>
           </div>
 

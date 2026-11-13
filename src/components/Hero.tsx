@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SITE } from "../data/site";
 import { track } from "../lib/analytics";
 
 export default function Hero() {
@@ -60,23 +61,41 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-tr from-green-200/40 to-yellow-200/40 rounded-3xl blur-2xl" />
-            <picture>
-              <source
-                srcSet="/agrovolt-system.webp"
-                type="image/webp"
-                width="1398"
-                height="663"
-              />
-              <img
-                src="/agrovolt-system.png"
-                alt="Esquema de un sistema agrovoltaico: paneles solares elevados sobre un cultivo con maquinaria trabajando debajo"
-                width="1398"
-                height="663"
-                loading="eager"
-                className="relative w-full h-auto rounded-2xl shadow-xl"
-              />
-            </picture>
+            <div className="pointer-events-none absolute -inset-4 bg-gradient-to-tr from-green-200/40 to-yellow-200/40 rounded-3xl blur-2xl" />
+            <a
+              href={SITE.model3d}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir el modelo 3D en Trimble Connect"
+              className="relative block"
+            >
+              <picture>
+                <source
+                  srcSet="/agrovolt-system.webp"
+                  type="image/webp"
+                  width="1398"
+                  height="663"
+                />
+                <img
+                  src="/agrovolt-system.png"
+                  alt="Esquema de un sistema agrovoltaico: paneles solares elevados sobre un cultivo con maquinaria trabajando debajo"
+                  width="1398"
+                  height="663"
+                  loading="eager"
+                  className="relative w-full h-auto rounded-2xl shadow-xl transition-opacity hover:opacity-95"
+                />
+              </picture>
+            </a>
+            <p className="relative z-10 mt-2 text-center text-xs text-gray-500">
+              <a
+                href={SITE.model3d}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block underline underline-offset-2 hover:text-green-600"
+              >
+                Modelo 3D
+              </a>
+            </p>
           </div>
         </div>
       </div>

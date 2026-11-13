@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; background: #fff; color: #111827; font-family: Arial, Helvetica, sans-serif; }
+  .page { width: 210mm; height: 297mm; padding: 10mm 13mm 8mm; display: flex; flex-direction: column; gap: 3.2mm; overflow: hidden; }
+  .top { display: flex; align-items: center; justify-content: space-between; }
+  .logo { height: 11mm; width: auto; }
+  .meta { text-align: right; font-size: 7.5pt; color: #6b7280; line-height: 1.35; }
+  .meta strong { color: #111827; font-size: 8pt; }
+  .kicker { font-size: 7.5pt; letter-spacing: 0.14em; text-transform: uppercase; color: #16a34a; font-weight: 700; }
+  h1 { font-size: 18.5pt; line-height: 1.08; margin: 1.5mm 0 1.5mm; letter-spacing: -0.02em; }
+  .lead { font-size: 9.4pt; line-height: 1.4; color: #374151; margin: 0; max-width: 160mm; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5mm; margin-top: 2.5mm; }
+  .stat { background: #f0fdf4; border: 0.3mm solid #bbf7d0; border-radius: 2.5mm; padding: 2.5mm 3mm; }
+  .stat strong { display: block; font-size: 14pt; color: #16a34a; line-height: 1; }
+  .stat span { display: block; font-size: 7.2pt; color: #4b5563; margin-top: 1mm; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+  .card { border: 0.3mm solid #e5e7eb; border-radius: 2.5mm; padding: 3mm 3.5mm; background: #fff; }
+  .card h2 { font-size: 8.2pt; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 1.8mm; color: #111827; }
+  .card ul { margin: 0; padding-left: 3.6mm; }
+  .card li { font-size: 8.2pt; line-height: 1.35; margin: 0 0 1.2mm; color: #374151; }
+  .card li strong { color: #111827; }
+  .solution { display: flex; flex-direction: column; gap: 1.5mm; }
+  .solution svg { width: 100%; height: 36mm; display: block; }
+  .pilot { background: #111827; color: #fff; border-radius: 2.5mm; padding: 3.2mm 4mm; display: grid; grid-template-columns: 1.05fr 2fr; gap: 4mm; align-items: center; }
+  .pilot .kicker { color: #facc15; }
+  .pilot h2 { font-size: 12.5pt; margin: 0.8mm 0 0; color: #fff; line-height: 1.2; }
+  .pilot p { margin: 1mm 0 0; font-size: 7.8pt; color: #d1d5db; line-height: 1.35; }
+  .pilot-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; }
+  .pilot-grid div { border-left: 0.5mm solid #374151; padding-left: 2mm; }
+  .pilot-grid strong { display: block; font-size: 11pt; color: #fff; line-height: 1.1; }
+  .pilot-grid span { display: block; font-size: 6.8pt; color: #9ca3af; margin-top: 0.8mm; }
+  .roles .green { background: #f0fdf4; border-color: #bbf7d0; }
+  .roles .yellow { background: #fefce8; border-color: #fde68a; }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; }
+  .step { border-top: 0.9mm solid #16a34a; padding-top: 1.8mm; }
+  .step strong { display: block; font-size: 8.2pt; line-height: 1.2; }
+  .step span { display: block; font-size: 7pt; color: #6b7280; margin-top: 0.8mm; line-height: 1.3; }
+  .metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; }
+  .metrics div { background: #f9fafb; border: 0.3mm solid #e5e7eb; border-radius: 2mm; padding: 2mm 2.2mm; }
+  .metrics strong { display: block; font-size: 8pt; line-height: 1.2; }
+  .metrics span { display: block; font-size: 6.6pt; color: #6b7280; margin-top: 0.6mm; line-height: 1.3; }
+  .closing { background: #f0fdf4; border: 0.3mm solid #bbf7d0; border-radius: 2.5mm; padding: 2.5mm 3mm; font-size: 8pt; line-height: 1.35; color: #166534; }
+  .closing strong { color: #111827; }
+  .footer { margin-top: auto; border-top: 0.3mm solid #e5e7eb; padding-top: 2mm; display: flex; justify-content: space-between; gap: 4mm; font-size: 7.2pt; color: #6b7280; line-height: 1.35; }
+  .footer strong { color: #111827; }
+  .fine { font-size: 6.6pt; color: #9ca3af; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <img class="logo" src="data:image/png;base64,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" alt="AgroVolt">
+    <div class="meta"><strong>Propuesta de piloto</strong><br>Ingeniería Aplicada · Noviembre 2026</div>
+  </div>
+
+  <div>
+    <div class="kicker">Agrovoltaica aplicada</div>
+    <h1>Un piloto real para medir agua, energía y protección del cultivo.</h1>
+    <p class="lead">Instalación demostrativa de 10–30 kWp en una explotación de Alicante, con paneles elevados e inclinables y control desde la app de AgroVolt.</p>
+    <div class="stats">
+      <div class="stat"><strong>−40 %</strong><span>agua de riego</span></div>
+      <div class="stat"><strong>10–30 kWp</strong><span>potencia del piloto</span></div>
+      <div class="stat"><strong>6–12 meses</strong><span>validación en campo</span></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>El problema</h2>
+      <ul>
+        <li><strong>Agua:</strong> el riego es el coste que más crece y la evapotranspiración se dispara en verano.</li>
+        <li><strong>Clima:</strong> granizo, golpes de calor y lluvia intensa comprometen la cosecha.</li>
+        <li><strong>Energía:</strong> bombeo, frío y maquinaria dependen de una factura eléctrica y del diésel.</li>
+      </ul>
+    </div>
+    <div class="card solution">
+      <h2>La solución</h2>
+      <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="54" cy="38" r="16" fill="#eab308"/>
+        <g stroke="#eab308" stroke-width="2" stroke-linecap="round">
+          <line x1="54" y1="12" x2="54" y2="20"/><line x1="54" y1="56" x2="54" y2="64"/>
+          <line x1="28" y1="38" x2="36" y2="38"/><line x1="72" y1="38" x2="80" y2="38"/>
+          <line x1="36" y1="20" x2="42" y2="26"/><line x1="66" y1="50" x2="72" y2="56"/>
+          <line x1="72" y1="20" x2="66" y2="26"/><line x1="42" y1="50" x2="36" y2="56"/>
+        </g>
+        <text x="54" y="84" text-anchor="middle" font-size="8" fill="#6b7280">sol</text>
+
+        <g transform="translate(132,28) rotate(-10)">
+          <rect x="0" y="0" width="62" height="22" rx="2" fill="#16a34a"/>
+          <rect x="72" y="0" width="62" height="22" rx="2" fill="#16a34a"/>
+          <rect x="144" y="0" width="62" height="22" rx="2" fill="#16a34a"/>
+        </g>
+        <g stroke="#374151" stroke-width="2">
+          <line x1="160" y1="52" x2="160" y2="112"/>
+          <line x1="232" y1="52" x2="232" y2="112"/>
+          <line x1="304" y1="52" x2="304" y2="112"/>
+        </g>
+        <line x1="40" y1="120" x2="392" y2="120" stroke="#9ca3af" stroke-width="1.5"/>
+        <g fill="#22c55e">
+          <path d="M70 120 l4 -14 l4 14z"/><path d="M90 120 l4 -12 l4 12z"/>
+          <path d="M112 120 l4 -14 l4 14z"/><path d="M350 120 l4 -14 l4 14z"/>
+          <path d="M370 120 l4 -12 l4 12z"/>
+        </g>
+        <text x="226" y="138" text-anchor="middle" font-size="8" fill="#6b7280">cultivo · paso de maquinaria</text>
+        <text x="232" y="20" text-anchor="middle" font-size="8" fill="#16a34a" font-weight="700">paneles elevados e inclinables</text>
+
+        <rect x="416" y="34" width="78" height="46" rx="5" fill="#111827"/>
+        <rect x="424" y="42" width="62" height="30" rx="2" fill="#e5e7eb"/>
+        <text x="455" y="61" text-anchor="middle" font-size="7.5" fill="#111827">APP</text>
+        <text x="455" y="92" text-anchor="middle" font-size="8" fill="#6b7280">control y datos</text>
+
+        <circle cx="354" cy="100" r="5" fill="#eab308"/>
+        <line x1="359" y1="100" x2="412" y2="70" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="3 2"/>
+        <text x="354" y="116" text-anchor="middle" font-size="7.5" fill="#6b7280">sensores</text>
+      </svg>
+      <div style="font-size:7.6pt;color:#374151;line-height:1.35;">Sombreo inteligente, protección antigranizo y energía para bombeo, frío y maquinaria. Todo monitorizado desde la app.</div>
+    </div>
+  </div>
+
+  <div class="pilot">
+    <div>
+      <div class="kicker">Piloto propuesto</div>
+      <h2>Una parcela. Datos reales. Decisión de escala.</h2>
+      <p>No es una demo teórica: medimos agua, energía, cultivo y protección antes de replicar.</p>
+    </div>
+    <div class="pilot-grid">
+      <div><strong>1</strong><span>finca colaboradora</span></div>
+      <div><strong>10–30</strong><span>kWp</span></div>
+      <div><strong>6–12</strong><span>meses</span></div>
+      <div><strong>5</strong><span>métricas clave</span></div>
+    </div>
+  </div>
+
+  <div class="grid2 roles">
+    <div class="card green">
+      <h2>AgroVolt aporta</h2>
+      <ul>
+        <li>App de control, monitorización y gestión.</li>
+        <li>Diseño técnico de la solución y integración de sensores.</li>
+        <li>Software, datos y panel de métricas.</li>
+        <li>Relación con la finca y coordinación del piloto.</li>
+      </ul>
+    </div>
+    <div class="card yellow">
+      <h2>Ingeniería Aplicada aporta</h2>
+      <ul>
+        <li>Ingeniería estructural y eléctrica.</li>
+        <li>Estructura, montaje y puesta en marcha.</li>
+        <li>Legalización, conexión y O&amp;M.</li>
+        <li>Presupuesto de ejecución y validación de costes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div class="kicker" style="margin-bottom:1.5mm;">Próximos pasos</div>
+    <div class="steps">
+      <div class="step"><strong>1. Reunión</strong><span>30 min telemáticos</span></div>
+      <div class="step"><strong>2. Visita</strong><span>sede o finca</span></div>
+      <div class="step"><strong>3. Pre-estudio</strong><span>alcance y coste</span></div>
+      <div class="step"><strong>4. Piloto</strong><span>acuerdo y ejecución</span></div>
+      <div class="step"><strong>5. Datos</strong><span>decisión de escala</span></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="kicker" style="margin-bottom:1.5mm;">Qué medimos</div>
+    <div class="metrics">
+      <div><strong>Agua</strong><span>m³ y humedad del suelo</span></div>
+      <div><strong>Energía</strong><span>kWh y autoconsumo</span></div>
+      <div><strong>Cultivo</strong><span>rendimiento y calidad</span></div>
+      <div><strong>Protección</strong><span>granizo y golpes de calor</span></div>
+      <div><strong>O&amp;M</strong><span>coste y disponibilidad</span></div>
+    </div>
+  </div>
+
+  <div class="closing"><strong>El objetivo del piloto no es el payback:</strong> es obtener datos reales de agua, energía, cultivo y protección para diseñar la instalación comercial con coste y riesgo validados.</div>
+
+  <div class="footer">
+    <div><strong>Miguel Gisbert</strong><br>Ingeniero de Software por la Universidad de Alicante</div>
+    <div>miguel.gisbert@agrovolt.es · 655850243<br>agrovolt.es · miguelgisbert.dev</div>
+    <div class="fine">Documento de trabajo.<br>No es una oferta comercial.</div>
+  </div>
+</div>
+</body>
+</html>

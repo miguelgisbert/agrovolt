@@ -6,6 +6,8 @@ export const SITE = {
   location: "03110 Mutxamel (Alicante), España",
   logo: "/logo.png",
   ogImage: "/og-image.png",
+  model3d:
+    "https://app21.connect.trimble.com/tc/api/2.0/s/wAVuUmhq806QPxeR622eDhheIUKoUkmzGdReTJlW85nIaxjxOYL9p3VDiN8v91sz",
   foundingDate: "2024",
 } as const;
 

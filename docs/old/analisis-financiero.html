@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; background: #fff; color: #111827; font-family: Arial, Helvetica, sans-serif; }
+  .page { width: 210mm; min-height: 297mm; padding: 11mm 14mm 9mm; display: flex; flex-direction: column; gap: 4mm; position: relative; overflow: hidden; }
+  .page + .page { page-break-before: always; }
+  .top { display: flex; align-items: center; justify-content: space-between; }
+  .logo { height: 10mm; width: auto; }
+  .meta { text-align: right; font-size: 7.5pt; color: #6b7280; line-height: 1.35; }
+  .meta strong { color: #111827; font-size: 8pt; }
+  .kicker { font-size: 7.5pt; letter-spacing: 0.14em; text-transform: uppercase; color: #16a34a; font-weight: 700; }
+  h1 { font-size: 20pt; line-height: 1.1; margin: 1.5mm 0 1.5mm; letter-spacing: -0.02em; }
+  .sub { font-size: 9.4pt; color: #374151; margin: 0; line-height: 1.4; }
+  .disclaimer { background: #fffbeb; border: 0.3mm solid #fde68a; border-radius: 2.5mm; padding: 2.5mm 3mm; font-size: 7.8pt; line-height: 1.4; color: #78350f; }
+  .grid2 { display: grid; grid-template-columns: 0.95fr 1.35fr; gap: 4mm; }
+  .card { border: 0.3mm solid #e5e7eb; border-radius: 2.5mm; padding: 3mm; background: #fff; }
+  .card h2 { font-size: 8.5pt; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 2mm; color: #111827; }
+  table { width: 100%; border-collapse: collapse; font-size: 7.8pt; }
+  th { background: #f3f4f6; color: #374151; text-align: left; padding: 1.6mm 1.4mm; font-size: 7.2pt; text-transform: uppercase; letter-spacing: 0.04em; }
+  td { padding: 1.6mm 1.4mm; border-bottom: 0.2mm solid #e5e7eb; vertical-align: top; }
+  td.label { font-weight: 700; color: #111827; }
+  .big { font-size: 16pt; color: #16a34a; font-weight: 700; line-height: 1; }
+  .small { font-size: 7.2pt; color: #6b7280; line-height: 1.35; }
+  .chart { border: 0.3mm solid #e5e7eb; border-radius: 2.5mm; padding: 2.5mm; }
+  .chart h2 { font-size: 8.5pt; margin: 0 0 1mm; text-transform: uppercase; letter-spacing: 0.1em; }
+  .chart p { font-size: 7.2pt; color: #6b7280; margin: 0 0 1.5mm; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm; }
+  .kpi { background: #f0fdf4; border: 0.3mm solid #bbf7d0; border-radius: 2.5mm; padding: 2.5mm; }
+  .kpi strong { display: block; font-size: 12pt; color: #16a34a; line-height: 1; }
+  .kpi span { display: block; font-size: 6.8pt; color: #4b5563; margin-top: 1mm; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+  .funding { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm; }
+  .fund { border: 0.3mm solid #e5e7eb; border-radius: 2.5mm; padding: 2.5mm; }
+  .fund strong { display: block; font-size: 8pt; margin-bottom: 1mm; }
+  .fund span { font-size: 7.2pt; color: #4b5563; line-height: 1.35; }
+  .checklist { margin: 0; padding-left: 4mm; }
+  .checklist li { font-size: 7.6pt; line-height: 1.4; margin-bottom: 1mm; color: #374151; }
+  .conclusion { background: #111827; color: #fff; border-radius: 2.5mm; padding: 3.5mm 4mm; }
+  .conclusion h2 { color: #facc15; font-size: 9pt; margin: 0 0 1.5mm; text-transform: uppercase; letter-spacing: 0.1em; }
+  .conclusion p { margin: 0; font-size: 8.2pt; line-height: 1.45; color: #e5e7eb; }
+  .note { background: #f0fdf4; border: 0.3mm solid #bbf7d0; border-radius: 2.5mm; padding: 2.5mm 3mm; font-size: 7.8pt; line-height: 1.4; color: #166534; }
+  .note strong { color: #111827; }
+  .footer { margin-top: auto; border-top: 0.3mm solid #e5e7eb; padding-top: 2mm; display: flex; justify-content: space-between; gap: 4mm; font-size: 7.2pt; color: #6b7280; line-height: 1.35; }
+  .footer strong { color: #111827; }
+  .fine { font-size: 6.6pt; color: #9ca3af; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <img class="logo" src="data:image/png;base64,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" alt="AgroVolt">
+    <div class="meta"><strong>Análisis financiero preliminar</strong><br>Piloto agrovoltaico · Noviembre 2026</div>
+  </div>
+
+  <div>
+    <div class="kicker">Escenario base · 20 kWp · Alicante</div>
+    <h1>Análisis financiero preliminar</h1>
+    <p class="sub">Una primera aproximación para dimensionar el piloto y abrir la conversación técnica con Ingeniería Aplicada.</p>
+  </div>
+
+  <div class="disclaimer"><strong>Estimación orientativa, no es una oferta.</strong> CAPEX, producción y autoconsumo deben validarse con el instalador y con la curva de consumo real de la finca. No incluye IVA, impuestos, inflación, degradación ni ahorro de agua/antigranizo.</div>
+
+  <div class="kpis">
+    <div class="kpi"><strong>36.000 €</strong><span>CAPEX piloto 20 kWp</span></div>
+    <div class="kpi"><strong>34.000 kWh</strong><span>producción anual</span></div>
+    <div class="kpi"><strong>4190 €</strong><span>flujo neto anual</span></div>
+    <div class="kpi"><strong>8,59 años</strong><span>payback simple</span></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>Hipótesis de trabajo</h2>
+      <table>
+        <tr><td class="label">Producción</td><td>1.700 kWh/kWp/año</td></tr>
+        <tr><td class="label">Autoconsumo</td><td>75 %</td></tr>
+        <tr><td class="label">Precio evitado</td><td>0,16 €/kWh</td></tr>
+        <tr><td class="label">Excedentes</td><td>0,06 €/kWh</td></tr>
+        <tr><td class="label">CAPEX</td><td>1.800 €/kWp</td></tr>
+        <tr><td class="label">O&amp;M</td><td>20 €/kWp/año</td></tr>
+        <tr><td class="label">Vida útil</td><td>25 años</td></tr>
+        <tr><td class="label">Ayuda</td><td>0 % base · 40 % escenario</td></tr>
+      </table>
+      <p class="small" style="margin:2mm 0 0;">Producción basada en PVGIS para Alicante. El autoconsumo depende de la curva de consumo de bombeo, frío y maquinaria.</p>
+    </div>
+
+    <div class="card">
+      <h2>Escenarios de piloto</h2>
+      <table>
+        <thead><tr><th>Potencia</th><th>CAPEX</th><th>Producción</th><th>Ahorro</th><th>Neto/año</th><th>Payback</th><th>Con ayuda</th></tr></thead>
+        <tbody>
+    <tr>
+      <td class="label">10 kWp</td>
+      <td>18.000 €</td>
+      <td>17.000 kWh</td>
+      <td>2295 €</td>
+      <td><strong>2095 €</strong></td>
+      <td><strong>8,59 años</strong></td>
+      <td>5,16 años</td>
+    </tr>
+    <tr>
+      <td class="label">20 kWp</td>
+      <td>36.000 €</td>
+      <td>34.000 kWh</td>
+      <td>4590 €</td>
+      <td><strong>4190 €</strong></td>
+      <td><strong>8,59 años</strong></td>
+      <td>5,16 años</td>
+    </tr>
+    <tr>
+      <td class="label">30 kWp</td>
+      <td>54.000 €</td>
+      <td>51.000 kWh</td>
+      <td>6885 €</td>
+      <td><strong>6285 €</strong></td>
+      <td><strong>8,59 años</strong></td>
+      <td>5,16 años</td>
+    </tr></tbody>
+      </table>
+      <p class="small" style="margin:2mm 0 0;">Payback simple = CAPEX / flujo neto anual. “Con ayuda” aplica un 40 % sobre el CAPEX, sin cambiar la producción.</p>
+    </div>
+  </div>
+
+  <div class="chart">
+    <h2>Flujo de caja acumulado · 20 kWp</h2>
+    <p>Recuperación de la inversión en el año 8–9 sin ayuda; en el año 5–6 con una ayuda del 40 %.</p>
+    
+    <svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <rect x="0" y="0" width="620" height="220" fill="#ffffff"/>
+      
+      <line x1="54" y1="186" x2="602" y2="186" stroke="#e5e7eb" stroke-width="1"/>
+      <text x="46" y="189" text-anchor="end" font-size="9" fill="#6b7280">-40k</text>
+    
+      <line x1="54" y1="160.15384615384616" x2="602" y2="160.15384615384616" stroke="#e5e7eb" stroke-width="1"/>
+      <text x="46" y="163.15384615384616" text-anchor="end" font-size="9" fill="#6b7280">-30k</text>
+    
+      <line x1="54" y1="134.30769230769232" x2="602" y2="134.30769230769232" stroke="#e5e7eb" stroke-width="1"/>
+      <text x="46" y="137.30769230769232" text-anchor="end" font-size="9" fill="#6b7280">-20k</text>
+    
+      <line x1="54" y1="108.46153846153847" x2="602" y2="108.46153846153847" stroke="#e5e7eb" stroke-width="1"/>
+      <text x="46" y="111.46153846153847" text-anchor="end" font-size="9" fill="#6b7280">-10k</text>
+    
+      <line x1="54" y1="82.61538461538461" x2="602" y2="82.61538461538461" stroke="#e5e7eb" stroke-width="1"/>
+      <text x="46" y="85.61538461538461" text-anchor="end" font-size="9" fill="#6b7280">0</text>
+    
+      <line x1="54" y1="56.76923076923077" x2="602" y2="56.76923076923077" stroke="#e5e7eb" stroke-width="1"/>
+      <text x="46" y="59.76923076923077" text-anchor="end" font-size="9" fill="#6b7280">10k</text>
+    
+      <line x1="54" y1="30.923076923076923" x2="602" y2="30.923076923076923" stroke="#e5e7eb" stroke-width="1"/>
+      <text x="46" y="33.92307692307692" text-anchor="end" font-size="9" fill="#6b7280">20k</text>
+    
+      <text x="54" y="210" text-anchor="middle" font-size="9" fill="#6b7280">0</text><text x="108.8" y="210" text-anchor="middle" font-size="9" fill="#6b7280">1</text><text x="163.6" y="210" text-anchor="middle" font-size="9" fill="#6b7280">2</text><text x="218.4" y="210" text-anchor="middle" font-size="9" fill="#6b7280">3</text><text x="273.2" y="210" text-anchor="middle" font-size="9" fill="#6b7280">4</text><text x="328" y="210" text-anchor="middle" font-size="9" fill="#6b7280">5</text><text x="382.8" y="210" text-anchor="middle" font-size="9" fill="#6b7280">6</text><text x="437.6" y="210" text-anchor="middle" font-size="9" fill="#6b7280">7</text><text x="492.4" y="210" text-anchor="middle" font-size="9" fill="#6b7280">8</text><text x="547.2" y="210" text-anchor="middle" font-size="9" fill="#6b7280">9</text><text x="602" y="210" text-anchor="middle" font-size="9" fill="#6b7280">10</text>
+      <polyline points="54,175.66153846153847 108.8,164.832 163.6,154.00246153846155 218.4,143.1729230769231 273.2,132.34338461538462 328,121.51384615384616 382.8,110.6843076923077 437.6,99.85476923076924 492.4,89.02523076923077 547.2,78.1956923076923 602,67.36615384615385" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+      <polyline points="54,138.44307692307694 108.8,127.61353846153847 163.6,116.784 218.4,105.95446153846154 273.2,95.12492307692308 328,84.29538461538462 382.8,73.46584615384614 437.6,62.63630769230769 492.4,51.806769230769234 547.2,40.97723076923077 602,30.14769230769231" fill="none" stroke="#eab308" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <circle cx="602" cy="67.36615384615385" r="4" fill="#16a34a"/>
+      <circle cx="602" cy="30.14769230769231" r="4" fill="#eab308"/>
+      <text x="54" y="16" font-size="9" fill="#6b7280">€ acumulados</text>
+      <g font-size="9">
+        <rect x="390" y="8" width="12" height="3" fill="#16a34a"/>
+        <text x="406" y="12" fill="#374151">Sin ayuda</text>
+        <rect x="480" y="8" width="12" height="3" fill="#eab308"/>
+        <text x="496" y="12" fill="#374151">Con ayuda 40 %</text>
+      </g>
+    </svg>
+  
+  </div>
+
+  <div class="note"><strong>Lectura rápida:</strong> el CAPEX y el precio de la energía son las variables que más mueven el payback. El ahorro de agua y la protección antigranizo no están incluidos; si se monetizan, el retorno mejora.</div>
+
+  <div class="footer">
+    <div><strong>Miguel Gisbert</strong><br>Ingeniero de Software por la Universidad de Alicante</div>
+    <div>miguel.gisbert@agrovolt.es · 655850243<br>agrovolt.es · miguelgisbert.dev</div>
+    <div class="fine">Documento de trabajo.<br>No es una oferta comercial.</div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="top">
+    <img class="logo" src="data:image/png;base64,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" alt="AgroVolt">
+    <div class="meta"><strong>Análisis financiero preliminar</strong><br>Piloto agrovoltaico · Noviembre 2026</div>
+  </div>
+
+  <div>
+    <div class="kicker">Sensibilidad y siguientes pasos</div>
+    <h1>Qué mueve el payback y qué falta por validar</h1>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h2>Sensibilidad del payback · 20 kWp</h2>
+      <table>
+        <thead><tr><th>Escenario</th><th>Payback simple</th></tr></thead>
+        <tbody><tr><td>Base</td><td><strong>8,59 años</strong></td></tr><tr><td>CAPEX +20 %</td><td><strong>10,31 años</strong></td></tr><tr><td>CAPEX −20 %</td><td><strong>6,87 años</strong></td></tr><tr><td>Precio energía +20 %</td><td><strong>7,05 años</strong></td></tr><tr><td>Precio energía −20 %</td><td><strong>11,04 años</strong></td></tr><tr><td>Autoconsumo 85 %</td><td><strong>7,95 años</strong></td></tr><tr><td>Autoconsumo 65 %</td><td><strong>9,35 años</strong></td></tr><tr><td>Ayuda 40 %</td><td><strong>5,16 años</strong></td></tr></tbody>
+      </table>
+      <p class="small" style="margin:2mm 0 0;">El CAPEX y el precio de la energía son las variables con más impacto. El autoconsumo depende de la finca y del perfil de bombeo.</p>
+    </div>
+
+    <div class="card">
+      <h2>Cómo financiar el piloto</h2>
+      <div class="funding">
+        <div class="fund"><strong>Fondos propios</strong><span>Piloto pequeño, control total y aprendizaje rápido.</span></div>
+        <div class="fund"><strong>Ayudas IDAE / IVACE</strong><span>Pueden reducir el CAPEX; hay que validar elegibilidad y tamaño mínimo.</span></div>
+        <div class="fund"><strong>Inversión compartida</strong><span>Instalador y finca comparten coste y riesgo; el piloto genera datos para todos.</span></div>
+        <div class="fund"><strong>PPA / leasing</strong><span>Menos CAPEX inicial; útil para la fase comercial, no tanto para un piloto.</span></div>
+      </div>
+      <p class="small" style="margin:2mm 0 0;">La estructura ideal para el piloto es un acuerdo de colaboración con roles, costes y datos definidos por escrito.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Qué hay que validar antes de escalar</h2>
+    <ul class="checklist">
+      <li><strong>CAPEX real:</strong> estructura elevada, cimentación, paneles, inversor, cableado, conexión y legalización.</li>
+      <li><strong>Producción real:</strong> comparar PVGIS con datos de campo y sombreado del cultivo.</li>
+      <li><strong>Autoconsumo:</strong> curva de consumo de bombeo, frío y maquinaria; excedentes y compensación.</li>
+      <li><strong>Ahorro de agua:</strong> humedad del suelo, evapotranspiración y consumo de riego antes/después.</li>
+      <li><strong>Protección y cultivo:</strong> granizo, golpes de calor, rendimiento y calidad de la cosecha.</li>
+      <li><strong>O&amp;M y seguro:</strong> mantenimiento real, garantías, limpieza y cobertura de riesgos.</li>
+    </ul>
+  </div>
+
+  <div class="conclusion">
+    <h2>Conclusión preliminar</h2>
+    <p>Con las hipótesis base, un piloto de 20 kWp se amortiza en <strong>8,6 años</strong> sin ayuda y en <strong>5,2 años</strong> con una ayuda del 40 %. El ahorro de agua y la protección antigranizo no están monetizados: son un upside que el piloto debe medir. El objetivo no es el payback del piloto, sino obtener los datos y el coste real para diseñar la instalación comercial.</p>
+  </div>
+
+  <div class="footer">
+    <div><strong>Miguel Gisbert</strong><br>Ingeniero de Software por la Universidad de Alicante</div>
+    <div>miguel.gisbert@agrovolt.es · 655850243<br>agrovolt.es · miguelgisbert.dev</div>
+    <div class="fine">Documento de trabajo.<br>No es una oferta comercial.</div>
+  </div>
+</div>
+</body>
+</html>
